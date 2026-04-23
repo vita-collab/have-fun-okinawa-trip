@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🌊 冲绳4天闺蜜行 · Jun 2025</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, 'PingFang SC', 'Hiragino Sans GB', sans-serif; background: #f5f3ee; color: #1a1a1a; min-height: 100vh; }
+
+  .hero { background: linear-gradient(160deg, #0a4f6e 0%, #1a7a8a 50%, #2db8c5 100%); color: white; padding: 2.5rem 1.5rem 3rem; text-align: center; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; bottom: -30px; left: 0; right: 0; height: 60px; background: #f5f3ee; border-radius: 50% 50% 0 0 / 100% 100% 0 0; }
+  .hero-title { font-size: 28px; font-weight: 700; margin-bottom: 6px; }
+  .hero-sub { font-size: 14px; opacity: 0.85; margin-bottom: 1.25rem; }
+  .flight-strip { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+  .flight-chip { background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; padding: 5px 14px; font-size: 12px; }
+
+  .container { max-width: 680px; margin: 0 auto; padding: 1.5rem 1rem; }
+
+  .weather-alert { background: #fff8e1; border: 1px solid #f59e0b; border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; }
+  .weather-alert-title { font-size: 13px; font-weight: 600; color: #92400e; margin-bottom: 4px; }
+  .weather-alert-body { font-size: 13px; color: #78350f; line-height: 1.6; }
+
+  .section-title { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #888; margin: 1.75rem 0 0.75rem; padding-left: 2px; }
+
+  /* TABS */
+  .tabs { display: flex; background: white; border-radius: 14px; padding: 4px; gap: 2px; margin-bottom: 1.25rem; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .tab { flex: 1; padding: 8px 4px; font-size: 12px; text-align: center; cursor: pointer; border: none; background: none; color: #888; border-radius: 10px; font-weight: 500; transition: all 0.2s; }
+  .tab.active { background: #0a4f6e; color: white; }
+  .panel { display: none; }
+  .panel.active { display: block; }
+
+  /* CARDS */
+  .card { background: white; border-radius: 14px; padding: 1.25rem; margin-bottom: 1rem; box-shadow: 0 1px 6px rgba(0,0,0,0.06); }
+  .card.featured { border: 2px solid #0a4f6e; }
+  .card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 10px; }
+  .card-title { font-size: 15px; font-weight: 600; color: #1a1a1a; }
+  .card-sub { font-size: 12px; color: #888; margin-top: 2px; }
+
+  .badge { font-size: 11px; padding: 3px 10px; border-radius: 20px; font-weight: 600; white-space: nowrap; }
+  .badge-primary { background: #e0f2fe; color: #075985; }
+  .badge-green { background: #dcfce7; color: #166534; }
+  .badge-orange { background: #fff7ed; color: #9a3412; }
+  .badge-red { background: #fef2f2; color: #991b1b; }
+  .badge-special { background: #fdf4ff; color: #7e22ce; }
+
+  .meta-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0; }
+  .meta-item { font-size: 12px; color: #555; }
+  .meta-item strong { color: #1a1a1a; }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 5px; margin: 8px 0; }
+  .tag { font-size: 11px; padding: 3px 10px; border-radius: 20px; background: #f3f4f6; color: #555; }
+
+  .reason { font-size: 13px; color: #555; line-height: 1.7; border-top: 1px solid #f0f0f0; padding-top: 10px; margin-top: 10px; }
+
+  .links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
+  .link-btn { font-size: 12px; color: #0a4f6e; text-decoration: none; border: 1px solid #bfdbfe; padding: 4px 12px; border-radius: 20px; }
+
+  /* TIMELINE */
+  .day-header { background: #0a4f6e; color: white; padding: 0.875rem 1.25rem; border-radius: 14px 14px 0 0; display: flex; justify-content: space-between; align-items: center; }
+  .day-title { font-size: 15px; font-weight: 600; }
+  .day-sub { font-size: 12px; opacity: 0.8; margin-top: 2px; }
+  .day-card { background: white; border-radius: 14px; margin-bottom: 1rem; overflow: hidden; box-shadow: 0 1px 6px rgba(0,0,0,0.06); }
+  .tl-row { display: flex; border-bottom: 1px solid #f5f5f5; }
+  .tl-row:last-child { border-bottom: none; }
+  .tl-time { min-width: 64px; padding: 10px 12px; font-size: 11px; color: #aaa; font-variant-numeric: tabular-nums; border-right: 1px solid #f5f5f5; display: flex; align-items: center; }
+  .tl-content { padding: 10px 14px; flex: 1; }
+  .tl-title { font-size: 13px; font-weight: 600; color: #1a1a1a; }
+  .tl-detail { font-size: 12px; color: #777; margin-top: 3px; line-height: 1.5; }
+  .event-highlight { background: #fdf4ff; border-left: 3px solid #a855f7; }
+  .event-highlight .tl-title { color: #7e22ce; }
+
+  /* ACTIVITY VOTE */
+  .activity-card { background: white; border-radius: 14px; margin-bottom: 10px; overflow: hidden; box-shadow: 0 1px 6px rgba(0,0,0,0.06); }
+  .activity-header { padding: 1rem 1.25rem 0.75rem; }
+  .activity-footer { padding: 0 1.25rem 1rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  .vote-area { display: flex; gap: 8px; align-items: center; }
+  .vote-count { font-size: 13px; color: #888; }
+  .vote-btn { border: none; background: none; font-size: 20px; cursor: pointer; padding: 2px 6px; border-radius: 8px; transition: background 0.15s; }
+  .vote-btn:hover { background: #f0f0f0; }
+  .vote-btn.voted { background: #e0f2fe; }
+  .interest-bar { height: 4px; background: #f0f0f0; }
+  .interest-fill { height: 4px; background: linear-gradient(90deg, #0a4f6e, #2db8c5); border-radius: 2px; transition: width 0.4s; }
+
+  /* TIPS */
+  .tip { background: white; border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.05); }
+  .tip-title { font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+  .tip-body { font-size: 13px; color: #555; line-height: 1.65; }
+
+  /* STARS */
+  .stars { color: #f59e0b; font-size: 12px; }
+
+  /* SPECIAL EVENT BOX */
+  .event-box { background: linear-gradient(135deg, #fdf4ff, #f0f9ff); border: 1px solid #e9d5ff; border-radius: 14px; padding: 1.25rem; margin-bottom: 1rem; }
+  .event-box-title { font-size: 14px; font-weight: 700; color: #7e22ce; margin-bottom: 6px; }
+  .event-box-body { font-size: 13px; color: #555; line-height: 1.7; }
+
+  /* WEATHER CONTEXT */
+  .weather-row { display: flex; gap: 8px; margin-bottom: 1rem; }
+  .weather-chip { flex: 1; background: white; border-radius: 10px; padding: 10px 12px; text-align: center; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+  .weather-chip-label { font-size: 11px; color: #888; }
+  .weather-chip-value { font-size: 18px; font-weight: 700; color: #0a4f6e; }
+  .weather-chip-note { font-size: 10px; color: #aaa; margin-top: 2px; }
+
+  /* TRANSPORT */
+  .transport-card { background: white; border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.05); display: flex; gap: 12px; align-items: flex-start; }
+  .transport-icon { font-size: 22px; }
+  .transport-text { flex: 1; }
+  .transport-title { font-size: 13px; font-weight: 600; }
+  .transport-detail { font-size: 12px; color: #777; margin-top: 3px; line-height: 1.5; }
+
+  /* DIVIDER */
+  .section-divider { font-size: 12px; font-weight: 600; color: #0a4f6e; padding: 4px 0 10px; border-bottom: 1px solid #e5e7eb; margin-bottom: 12px; }
+
+  @media (max-width: 400px) {
+    .hero-title { font-size: 22px; }
+    .flight-strip { flex-direction: column; align-items: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <p style="font-size:13px;opacity:0.7;margin-bottom:6px">✈️ 北京 → 东京 → 冲绳 → 大阪 → 北京</p>
+  <h1 class="hero-title">🌊 冲绳4天闺蜜行</h1>
+  <p class="hero-sub">4人 · 30岁 · 冲浪 / 海 / 美食 / 骑行 · 2025年6月</p>
+  <div class="flight-strip">
+    <span class="flight-chip">📅 在岛 Jun 19–23</span>
+    <span class="flight-chip">🌤 梅雨末期 → 入夏</span>
+    <span class="flight-chip">☀️ 约28–30°C</span>
+    <span class="flight-chip">🎊 系满龙舟赛 Jun 18</span>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="weather-alert">
+    <div class="weather-alert-title">⚠️ 6月天气特别提示 — 梅雨末期 · 即将入夏！</div>
+    <div class="weather-alert-body">
+      冲绳梅雨通常在 <strong>6月20日前后结束</strong>，你们在岛正好是梅雨收尾 + 夏天登场的过渡期！前几天（6/19–21）可能阵雨、闷热，<strong>6/22–23 大概率晴天</strong>，是最适合海上活动的日子。<br><br>
+      ✅ 海上活动（浮潜、潜水）小雨也能正常进行，基本不影响<br>
+      ☔️ 备好防水袋和雨备计划，也建议提前确认当天活动是否照常
+    </div>
+  </div>
+
+  <!-- WEATHER CHIPS -->
+  <div class="weather-row">
+    <div class="weather-chip">
+      <div class="weather-chip-label">气温</div>
+      <div class="weather-chip-value">28–30°</div>
+      <div class="weather-chip-note">闷热，防晒必备</div>
+    </div>
+    <div class="weather-chip">
+      <div class="weather-chip-label">海水温度</div>
+      <div class="weather-chip-value">26–27°</div>
+      <div class="weather-chip-note">最舒适的季节</div>
+    </div>
+    <div class="weather-chip">
+      <div class="weather-chip-label">日落时间</div>
+      <div class="weather-chip-value">19:30</div>
+      <div class="weather-chip-note">夏至前后最长白昼</div>
+    </div>
+  </div>
+
+  <!-- TABS -->
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab('itinerary', this)">📅 行程</button>
+    <button class="tab" onclick="switchTab('hotels', this)">🏨 住宿</button>
+    <button class="tab" onclick="switchTab('vote', this)">🗳 大家选</button>
+    <button class="tab" onclick="switchTab('tips', this)">💡 贴士</button>
+  </div>
+
+  <!-- ====== ITINERARY ====== -->
+  <div id="itinerary" class="panel active">
+
+    <div class="event-box">
+      <div class="event-box-title">🎊 特别彩蛋 · 系满龙舟大赛</div>
+      <div class="event-box-body">
+        你们 <strong>6月19日抵达那霸</strong>，前一天（6月18日）系满市有一年一度的龙舟大赛，虽然不赶上，但若想感受下节庆余韵，系满港口附近的海鲜市场仍然热闹，值得顺路。<br><br>
+        另：6月下旬 → 7月初，<strong>「爱与和平摇滚音乐会」</strong>在冲绳市野外舞台举行，冲绳本土乐团彻夜演出，氛围很特别（适合 6/22 晚作为备选夜间活动）。
+      </div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <div>
+          <div class="day-title">Day 1 · 6月19日（周四）· 落地 + 初见日落</div>
+          <div class="day-sub">NH477 东京→冲绳 15:25–18:00 · 住北谷</div>
+        </div>
+        <span class="badge badge-orange">可能阵雨</span>
+      </div>
+      <div class="tl-row"><div class="tl-time">18:00</div><div class="tl-content"><div class="tl-title">✈️ 抵达那霸机场（国际航站楼）</div><div class="tl-detail">领行李 + 取租车（预订 Nippon / Toyota Rent-a-Car）或坐机场巴士 → 北谷约35分钟</div></div></div>
+      <div class="tl-row"><div class="tl-time">19:00</div><div class="tl-content"><div class="tl-title">🏨 Check in · Vessel Hotel Campana</div><div class="tl-detail">海景房、放行李、换装，先溜达去 Sunset Beach 看日落（步行 2 分钟）</div></div></div>
+      <div class="tl-row"><div class="tl-time">19:30</div><div class="tl-content"><div class="tl-title">🌅 Sunset Beach 仪式感日落</div><div class="tl-detail">夏至前后冲绳日落在 19:30 前后，是全年最晚的日落，光线超级美，必拍！</div></div></div>
+      <div class="tl-row"><div class="tl-time">20:30</div><div class="tl-content"><div class="tl-title">🍜 美国村觅食</div><div class="tl-detail">塔可饭 / 冲绳面 / 居酒屋，步行圈内选择超多，随心所欲吃喝</div></div></div>
+      <div class="tl-row" style="background:#f9fafb"><div class="tl-time">备注</div><div class="tl-content"><div class="tl-title" style="color:#888;font-size:12px">⚠️ 此时仍梅雨期，建议做好下雨备案（室内觅食也很丰富）</div></div></div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <div>
+          <div class="day-title">Day 2 · 6月20日（周五）· 骑行 + 冲浪</div>
+          <div class="day-sub">住北谷 · 夏至 · 全年最长白天</div>
+        </div>
+        <span class="badge badge-orange">梅雨收尾</span>
+      </div>
+      <div class="tl-row"><div class="tl-time">08:30</div><div class="tl-content"><div class="tl-title">☀️ 酒店早餐（强烈推荐！）</div><div class="tl-detail">Vessel 早餐自助口碑极好，扛住上午活动体力</div></div></div>
+      <div class="tl-row"><div class="tl-time">10:00</div><div class="tl-content"><div class="tl-title">🚴 租自行车 · 骑行北谷海岸线</div><div class="tl-detail">从酒店租车，阿拉哈海滩 → 美国村沿海骑行约 6km，途经网红咖啡馆，停下来拍照</div></div></div>
+      <div class="tl-row"><div class="tl-time">12:30</div><div class="tl-content"><div class="tl-title">🍱 海边午饭 · Araha Beach 附近</div><div class="tl-detail">选有落地窗的海景餐厅，冲绳海鲜定食或本地特色菜</div></div></div>
+      <div class="tl-row"><div class="tl-time">14:30</div><div class="tl-content"><div class="tl-title">🏄 初级冲浪课（提前预约！）</div><div class="tl-detail">残波海滩 / 北谷冲浪点，约 2 小时含教练，所有装备提供，适合零基础</div></div></div>
+      <div class="tl-row"><div class="tl-time">17:30</div><div class="tl-content"><div class="tl-title">♨️ 回酒店泡浴场 / 放松</div><div class="tl-detail">Vessel 有公共浴场，泡完再出去吃晚饭效果加倍</div></div></div>
+      <div class="tl-row event-highlight"><div class="tl-time">夜晚</div><div class="tl-content"><div class="tl-title">🎵 特别提示 · 夏至之夜</div><div class="tl-detail">今日是夏至（6月21日），是全年白天最长！冲绳夏至日落约 19:35，晚饭可以安排在 Sunset Beach 附近，配上海景，仪式感拉满</div></div></div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <div>
+          <div class="day-title">Day 3 · 6月21日（周六）· 青之洞窟 + 转场</div>
+          <div class="day-sub">上午北谷 → 下午转住恩纳村</div>
+        </div>
+        <span class="badge badge-green">晴天概率升</span>
+      </div>
+      <div class="tl-row"><div class="tl-time">08:00</div><div class="tl-content"><div class="tl-title">🤿 青之洞窟浮潜 / 体验潜水</div><div class="tl-detail">恩纳村真荣田岬（需提前在Klook/KKday预约），约 2–2.5 小时，GoPro 拍照送手机。注意：即使阴天或小雨也通常正常出发</div></div></div>
+      <div class="tl-row"><div class="tl-time">11:30</div><div class="tl-content"><div class="tl-title">🍜 午饭 · 恩纳村本地海鲜</div><div class="tl-detail">浮潜结束就在附近觅食，能看到刚才潜过的海，很有成就感</div></div></div>
+      <div class="tl-row"><div class="tl-time">13:00</div><div class="tl-content"><div class="tl-title">🏨 Check in · Renaissance Okinawa Resort</div><div class="tl-detail">换住恩纳村五星度假村，安置行李，换上泳衣</div></div></div>
+      <div class="tl-row"><div class="tl-time">14:30</div><div class="tl-content"><div class="tl-title">🏖️ 私人海滩下午茶时光</div><div class="tl-detail">铺上沙滩垫，喝椰子，看海，无所事事就是最大的奢侈</div></div></div>
+      <div class="tl-row event-highlight"><div class="tl-time">17:30</div><div class="tl-content"><div class="tl-title">🌅 万座毛象鼻岩 · 冲绳TOP日落机位</div><div class="tl-detail">开车 10 分钟 · 这是冲绳最拍的日落地点，珊瑚礁悬崖+夕阳，拍出来绝对出圈</div></div></div>
+      <div class="tl-row"><div class="tl-time">19:30</div><div class="tl-content"><div class="tl-title">🍷 酒店餐厅晚餐</div><div class="tl-detail">Renaissance 内有多个餐厅，懒懒地不用出去，配海景用餐</div></div></div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <div>
+          <div class="day-title">Day 4 · 6月22日（周日）· SUP + 骑行 + 慢游</div>
+          <div class="day-sub">住恩纳村 · 最后一个完整的岛上日</div>
+        </div>
+        <span class="badge badge-green">大概率晴天</span>
+      </div>
+      <div class="tl-row"><div class="tl-time">07:30</div><div class="tl-content"><div class="tl-title">🌊 清晨私人海滩 SUP / Clear SUP</div><div class="tl-detail">人少水清，清晨海面最平静，透明板站在海上能看到脚下珊瑚，出片神仙质感</div></div></div>
+      <div class="tl-row"><div class="tl-time">09:30</div><div class="tl-content"><div class="tl-title">🚴 恩纳村海岸骑行</div><div class="tl-detail">沿 58 号公路租电动单车，路边咖啡馆随时停，没有时间压力</div></div></div>
+      <div class="tl-row"><div class="tl-time">12:00</div><div class="tl-content"><div class="tl-title">🍜 恩纳村海景午饭</div><div class="tl-detail">找有落地玻璃窗的本地小店，冲绳面 + 热带水果刨冰</div></div></div>
+      <div class="tl-row"><div class="tl-time">14:00</div><div class="tl-content"><div class="tl-title">😴 海滩 free time · 纯放空</div><div class="tl-detail">最后在海边刷手机、发朋友圈、聊天发呆，按各人节奏</div></div></div>
+      <div class="tl-row event-highlight"><div class="tl-time">晚上</div><div class="tl-content"><div class="tl-title">🎵 备选 · 爱与和平摇滚音乐会</div><div class="tl-detail">6月下旬–7月初，冲绳市野外舞台举办，冲绳本土乐团彻夜演出，氛围特别，可查当年具体日期</div></div></div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-header">
+        <div>
+          <div class="day-title">Day 5 · 6月23日（周一）· 离岛日</div>
+          <div class="day-sub">NH2528 冲绳→大阪 15:00–16:55（那霸国内航站楼）</div>
+        </div>
+        <span class="badge badge-primary">离岛日</span>
+      </div>
+      <div class="tl-row"><div class="tl-time">上午</div><div class="tl-content"><div class="tl-title">🏖️ 最后的海滩时光 / 酒店泳池</div><div class="tl-detail">退房前尽情泡，大多数酒店 11 点退房，可寄存行李继续玩到 13 点</div></div></div>
+      <div class="tl-row"><div class="tl-time">12:00</div><div class="tl-content"><div class="tl-title">🚗 前往那霸机场（国内航站楼）</div><div class="tl-detail">恩纳村到机场约 60–70 分钟，NH2528 是国内线（日本国内），注意是<strong>国内航站楼</strong>，不是国际楼</div></div></div>
+      <div class="tl-row"><div class="tl-time">13:00</div><div class="tl-content"><div class="tl-title">🛍️ 机场免税店 · 扫货</div><div class="tl-detail">冲绳特产：泡盛酒、黑糖、紫薯饼干、海盐巧克力、风狮爷摆件</div></div></div>
+      <div class="tl-row"><div class="tl-time">15:00</div><div class="tl-content"><div class="tl-title">✈️ 冲绳 → 大阪 （NH2528，实际 6J）</div><div class="tl-detail">飞行约 2 小时，16:55 抵达大阪（关西机场）</div></div></div>
+      <div class="tl-row" style="background:#f9fafb"><div class="tl-time">提示</div><div class="tl-content"><div class="tl-title" style="color:#888;font-size:12px">次日（6/24）NH979 大阪→北京 09:30–12:05，注意换机场 or 留大阪时间</div></div></div>
+    </div>
+  </div>
+
+  <!-- ====== HOTELS ====== -->
+  <div id="hotels" class="panel">
+
+    <p class="section-divider">🏠 前半程（6/19–21）· 北谷/中部 便捷型</p>
+
+    <div class="card featured">
+      <div class="card-header">
+        <div>
+          <div class="card-title">Vessel Hotel Campana Okinawa</div>
+          <div class="card-sub">北谷町美国村 · 日落海滩步行 2 分钟</div>
+        </div>
+        <span class="badge badge-primary">首推</span>
+      </div>
+      <div class="stars">★★★★</div> <span style="font-size:12px;color:#888">TripAdvisor 4.4 · 1415条评价 · 好评率 98%</span>
+      <div class="meta-row">
+        <div class="meta-item">💴 <strong>¥900–1600</strong>/晚/两人间</div>
+        <div class="meta-item">🛏 海景阳台房</div>
+        <div class="meta-item">🚗 机场约 25 分钟</div>
+      </div>
+      <div class="tags">
+        <span class="tag">公共浴场</span><span class="tag">室外泳池</span><span class="tag">早餐口碑极好</span><span class="tag">自行车出租</span><span class="tag">便利店</span><span class="tag">机场巴士直达</span>
+      </div>
+      <div class="reason">为什么推荐：步行 2 分钟就是 Sunset Beach，美国村餐厅酒吧密集，骑行 wishlist 直接从酒店出发。TripAdvisor 1400+ 评价中差评不到 30 条。</div>
+      <div class="links">
+        <a class="link-btn" href="https://www.booking.com/hotel/jp/vessel-campana-okinawa.html" target="_blank">Booking.com ↗</a>
+        <a class="link-btn" href="https://www.tripadvisor.com/Hotel_Review-g1025634-d2528881-Reviews-Vessel_Hotel_Campana_Okinawa-Chatan_cho_Nakagami_gun_Okinawa_Prefecture_Kyushu.html" target="_blank">TripAdvisor评价 ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <div class="card-title">Lequ Okinawa Chatan Spa & Resort</div>
+          <div class="card-sub">北谷町 · 更新更豪华</div>
+        </div>
+        <span class="badge badge-green">备选</span>
+      </div>
+      <div class="meta-row">
+        <div class="meta-item">💴 <strong>¥1400–2000</strong>/晚</div>
+        <div class="meta-item">🛁 温泉水疗</div>
+      </div>
+      <div class="tags"><span class="tag">海景房</span><span class="tag">温泉SPA</span><span class="tag">美国村步行圈</span></div>
+      <div class="reason">比 Vessel 更新，水疗设施丰富，想多泡汤的风格更适合。</div>
+      <div class="links">
+        <a class="link-btn" href="https://www.booking.com/hotel/jp/lequ-okinawa-chatan-spa-resort.html" target="_blank">Booking.com ↗</a>
+      </div>
+    </div>
+
+    <p class="section-divider" style="margin-top:1.5rem">🌴 后半程（6/21–23）· 恩纳村 海岛惬意型</p>
+
+    <div class="card featured">
+      <div class="card-header">
+        <div>
+          <div class="card-title">Renaissance Okinawa Resort</div>
+          <div class="card-sub">恩纳村 · 万豪旗下五星私人海滩度假村</div>
+        </div>
+        <span class="badge badge-primary">首推</span>
+      </div>
+      <div class="stars">★★★★★</div> <span style="font-size:12px;color:#888">恩纳村口碑 NO.1 · 万豪积分可用</span>
+      <div class="meta-row">
+        <div class="meta-item">💴 <strong>¥1500–2200</strong>/晚</div>
+        <div class="meta-item">🏖 私人沙滩</div>
+        <div class="meta-item">🚗 机场约 60 分钟</div>
+      </div>
+      <div class="tags">
+        <span class="tag">私人海滩</span><span class="tag">浮潜/皮划艇</span><span class="tag">游艇码头</span><span class="tag">多个泳池</span><span class="tag">水上活动直约</span>
+      </div>
+      <div class="reason">恩纳村最具性价比五星体验，酒店内直接提供水上活动预约，无需出门折腾。私人海滩清晨漫步超美，日落机位也极好。</div>
+      <div class="links">
+        <a class="link-btn" href="https://www.marriott.com/en-us/hotels/okarw-renaissance-okinawa-resort/overview/" target="_blank">万豪官网 ↗</a>
+        <a class="link-btn" href="https://hotels.ctrip.com/hotel/onna35725" target="_blank">携程查价 ↗</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <div class="card-title">ANA InterContinental Manza Beach Resort</div>
+          <div class="card-sub">恩纳村万座海滨 · 全日空洲际</div>
+        </div>
+        <span class="badge badge-green">备选（更壕）</span>
+      </div>
+      <div class="meta-row">
+        <div class="meta-item">💴 <strong>¥1800–2500</strong>/晚</div>
+        <div class="meta-item">🏖 万座海湾</div>
+      </div>
+      <div class="tags"><span class="tag">万座海滩独享</span><span class="tag">海上活动齐全</span><span class="tag">水疗</span></div>
+      <div class="reason">若预算可以到 ¥2000–2500/晚，万座海滩是冲绳最美海湾之一，水质清澈，潜水环境顶级。</div>
+      <div class="links">
+        <a class="link-btn" href="https://www.ihg.com/intercontinental/hotels/us/en/onna/okamc/hoteldetail" target="_blank">IHG官网 ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== VOTE ====== -->
+  <div id="vote" class="panel">
+
+    <p style="font-size:13px;color:#555;margin-bottom:1rem;line-height:1.6">点 👍 给感兴趣的活动，看大家的热度排名！每人可以给多个活动投票。</p>
+
+    <p class="section-divider">🌊 海上活动</p>
+
+    <div class="activity-card">
+      <div class="activity-header">
+        <div class="card-header">
+          <div>
+            <div class="card-title">🤿 青之洞窟浮潜 / 体验潜水</div>
+            <div class="card-sub">恩纳村真荣田岬 · 约 2–3 小时 · Day 3 上午</div>
+          </div>
+          <span class="badge badge-primary">No.1 必做</span>
+        </div>
+        <div class="meta-row">
+          <div class="meta-item">💴 <strong>约¥300–500</strong>/人</div>
+          <div class="meta-item">📍 恩纳村</div>
+          <div class="meta-item">🌧 小雨也可出发</div>
+        </div>
+        <p style="font-size:12px;color:#666;line-height:1.6">阳光折射进洞穴，整片海水泛梦幻蓝光。免费 GoPro 拍摄，照片直传手机。即使下雨通常也照常进行。<br><a href="https://www.klook.com/en-US/experiences/list/okinawa-snorkeling/c6484-cate123/" target="_blank" style="color:#0a4f6e;font-size:12px">Klook预约 ↗</a></p>
+      </div>
+      <div class="interest-bar"><div class="interest-fill" id="fill-0" style="width:0%"></div></div>
+      <div class="activity-footer">
+        <span class="vote-count" id="count-0">0 人感兴趣</span>
+        <div class="vote-area">
+          <button class="vote-btn" id="btn-0" onclick="vote(0)">👍</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-header">
+        <div class="card-header">
+          <div>
+            <div class="card-title">🏄 初级冲浪课</div>
+            <div class="card-sub">残波海滩 / 北谷 · 约 2 小时 · Day 2 下午</div>
+          </div>
+          <span class="badge badge-green">Wishlist</span>
+        </div>
+        <div class="meta-row">
+          <div class="meta-item">💴 <strong>约¥400–700</strong>/人</div>
+          <div class="meta-item">📍 北谷/读谷村</div>
+          <div class="meta-item">☀️ 晴天更好</div>
+        </div>
+        <p style="font-size:12px;color:#666;line-height:1.6">残波是冲绳最适合初学者的冲浪点，浪型温和稳定。4 人一起上课，第一次站上浪的成就感爆棚！含教练 + 所有装备。</p>
+      </div>
+      <div class="interest-bar"><div class="interest-fill" id="fill-1" style="width:0%"></div></div>
+      <div class="activity-footer">
+        <span class="vote-count" id="count-1">0 人感兴趣</span>
+        <div class="vote-area">
+          <button class="vote-btn" id="btn-1" onclick="vote(1)">👍</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-header">
+        <div class="card-header">
+          <div>
+            <div class="card-title">🛶 Clear SUP 透明立桨</div>
+            <div class="card-sub">恩纳村私人海滩 · 约 1–1.5 小时 · Day 4 清晨</div>
+          </div>
+          <span class="badge badge-special">网红打卡</span>
+        </div>
+        <div class="meta-row">
+          <div class="meta-item">💴 <strong>约¥200–400</strong>/人</div>
+          <div class="meta-item">📍 恩纳村</div>
+        </div>
+        <p style="font-size:12px;color:#666;line-height:1.6">站在透明桨板上，能清楚看到脚下珊瑚和热带鱼，仿佛悬浮在空中。清晨水面如镜，出片质量极高。</p>
+      </div>
+      <div class="interest-bar"><div class="interest-fill" id="fill-2" style="width:0%"></div></div>
+      <div class="activity-footer">
+        <span class="vote-count" id="count-2">0 人感兴趣</span>
+        <div class="vote-area">
+          <button class="vote-btn" id="btn-2" onclick="vote(2)">👍</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-header">
+        <div class="card-header">
+          <div>
+            <div class="card-title">🚀 水上摩托 / 拖伞 / 香蕉船</div>
+            <div class="card-sub">恩纳村 or 万座海滩 · 可单项 or 套餐</div>
+          </div>
+          <span class="badge badge-orange">刺激派</span>
+        </div>
+        <div class="meta-row">
+          <div class="meta-item">💴 <strong>约¥300–600</strong>/人</div>
+          <div class="meta-item">📍 中部/恩纳村</div>
+        </div>
+        <p style="font-size:12px;color:#666;line-height:1.6">拖伞可以飞上空中俯瞰冲绳海岸线，香蕉船适合 4 人一起笑成傻瓜。有些酒店提供套餐组合。</p>
+      </div>
+      <div class="interest-bar"><div class="interest-fill" id="fill-3" style="width:0%"></div></div>
+      <div class="activity-footer">
+        <span class="vote-count" id="count-3">0 人感兴趣</span>
+        <div class="vote-area">
+          <button class="vote-btn" id="btn-3" onclick="vote(3)">👍</button>
+        </div>
+      </div>
+    </div>
+
+    <p class="section-divider" style="margin-top:1rem">🚴 陆地活动</p>
+
+    <div class="activity-card">
+      <div class="activity-header">
+        <div class="card-header">
+          <div>
+            <div class="card-title">🚴 北谷海岸线骑行</div>
+            <div class="card-sub">阿拉哈海滩 → 美国村 · 约 5–8km · Day 2 上午</div>
+          </div>
+          <span class="badge badge-green">Wishlist</span>
+        </div>
+        <div class="meta-row">
+          <div class="meta-item">💴 <strong>租车¥50–150</strong>/天</div>
+          <div class="meta-item">📍 北谷</div>
+        </div>
+        <p style="font-size:12px;color:#666;line-height:1.6">沿海骑行，途经网红咖啡馆，随时停下拍照，不累，出片，全程有海。Vessel 酒店直接租。</p>
+      </div>
+      <div class="interest-bar"><div class="interest-fill" id="fill-4" style="width:0%"></div></div>
+      <div class="activity-footer">
+        <span class="vote-count" id="count-4">0 人感兴趣</span>
+        <div class="vote-area">
+          <button class="vote-btn" id="btn-4" onclick="vote(4)">👍</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-header">
+        <div class="card-header">
+          <div>
+            <div class="card-title">🚴 恩纳村 58 号公路电动车骑行</div>
+            <div class="card-sub">海岸线任意探索 · Day 4 上午</div>
+          </div>
+        </div>
+        <div class="meta-row">
+          <div class="meta-item">💴 <strong>电动车租约¥100</strong>/人</div>
+          <div class="meta-item">📍 恩纳村</div>
+        </div>
+        <p style="font-size:12px;color:#666;line-height:1.6">比普通自行车轻松，爬坡不费力，沿途海景和咖啡馆更密集，随停随走。</p>
+      </div>
+      <div class="interest-bar"><div class="interest-fill" id="fill-5" style="width:0%"></div></div>
+      <div class="activity-footer">
+        <span class="vote-count" id="count-5">0 人感兴趣</span>
+        <div class="vote-area">
+          <button class="vote-btn" id="btn-5" onclick="vote(5)">👍</button>
+        </div>
+      </div>
+    </div>
+
+    <p class="section-divider" style="margin-top:1rem">🍜 美食专项</p>
+
+    <div class="activity-card">
+      <div class="activity-header">
+        <div class="card-header">
+          <div>
+            <div class="card-title">🍜 冲绳本岛美食打卡</div>
+            <div class="card-sub">全行程 · 按自己节奏</div>
+          </div>
+        </div>
+        <p style="font-size:12px;color:#666;line-height:1.6">必吃：冲绳面 / 塔可饭 / 炸猪排（ソーキそば）/ 海鲜盖饭 / 黑糖刨冰 / A&W 汉堡（冲绳特有）/ 泡盛调酒。推荐用 Tabelog App 查周边评价。</p>
+      </div>
+      <div class="interest-bar"><div class="interest-fill" id="fill-6" style="width:0%"></div></div>
+      <div class="activity-footer">
+        <span class="vote-count" id="count-6">0 人感兴趣</span>
+        <div class="vote-area">
+          <button class="vote-btn" id="btn-6" onclick="vote(6)">👍</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-header">
+        <div class="card-header">
+          <div>
+            <div class="card-title">🎵 爱与和平摇滚音乐会</div>
+            <div class="card-sub">冲绳市野外舞台 · 6月下旬–7月初 · 备选夜晚</div>
+          </div>
+          <span class="badge badge-special">特别活动</span>
+        </div>
+        <p style="font-size:12px;color:#666;line-height:1.6">冲绳本土摇滚乐团彻夜演出，观众多为驻扎美军，是冲绳独特景象之一，氛围特别。可查 6/22 是否有场次。</p>
+      </div>
+      <div class="interest-bar"><div class="interest-fill" id="fill-7" style="width:0%"></div></div>
+      <div class="activity-footer">
+        <span class="vote-count" id="count-7">0 人感兴趣</span>
+        <div class="vote-area">
+          <button class="vote-btn" id="btn-7" onclick="vote(7)">👍</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== TIPS ====== -->
+  <div id="tips" class="panel">
+
+    <p class="section-divider">✈️ 航班关键信息</p>
+
+    <div class="transport-card">
+      <div class="transport-icon">🛬</div>
+      <div class="transport-text">
+        <div class="transport-title">6/19 抵达冲绳 · NH477 15:25–18:00</div>
+        <div class="transport-detail">羽田 T2 → 那霸（国际航站楼）。落地约 18:00，行李 + 入境约 30–40 分钟，到北谷约 19:00，时间正好看日落！</div>
+      </div>
+    </div>
+    <div class="transport-card">
+      <div class="transport-icon">🛫</div>
+      <div class="transport-text">
+        <div class="transport-title">6/23 离开冲绳 · NH2528 15:00–16:55</div>
+        <div class="transport-detail">⚠️ <strong>注意：从那霸机场国内航站楼出发</strong>，不是国际楼！恩纳村出发建议 12:30 前动身（约 60–70 分钟车程），提前到机场用餐 + 买伴手礼。</div>
+      </div>
+    </div>
+    <div class="transport-card">
+      <div class="transport-icon">🏨</div>
+      <div class="transport-text">
+        <div class="transport-title">6/23 晚大阪过夜</div>
+        <div class="transport-detail">16:55 到大阪，次日 6/24 NH979 09:30 飞北京。建议提前预订关西机场附近酒店（车程 10–15 分钟），省去折腾。</div>
+      </div>
+    </div>
+
+    <p class="section-divider" style="margin-top:1.5rem">🌧 梅雨期应对方案</p>
+
+    <div class="tip">
+      <div class="tip-title">☔️ 遇到大雨怎么办？</div>
+      <div class="tip-body">浮潜/潜水：小雨通常照常，提前确认店家<br>冲浪：大风大浪可能取消，需备备用方案<br>骑行：改室内咖啡馆 + 美丽海水族馆（北部，值得专程去）<br>所有海上活动建议下载当天天气预报再确认出发</div>
+    </div>
+    <div class="tip">
+      <div class="tip-title">🚗 交通建议</div>
+      <div class="tip-body">强烈建议 4 人合租一辆车！恩纳村公共交通极少，自驾灵活度最高。推荐 Nippon Rent-a-Car 或 Toyota Rent-a-Car，提前 1 个月预订。需要日本国际驾照（中国大陆驾照无效，需换取）。</div>
+    </div>
+    <div class="tip">
+      <div class="tip-title">📱 必备 App</div>
+      <div class="tip-body">Google Maps（日本导航最好用）· Klook / KKday（活动预约）· Tabelog（日本餐厅评价）· 携程（中文价格对比）· Weather News（日本最准天气）</div>
+    </div>
+    <div class="tip">
+      <div class="tip-title">🌞 防晒必备</div>
+      <div class="tip-body">6 月冲绳紫外线指数极高，SPF 50+ 防晒是最低标准。建议额外备防晒冲浪服（浮潜、冲浪时穿），骑行时备薄长袖或防晒外套。</div>
+    </div>
+    <div class="tip">
+      <div class="tip-title">💴 预算参考（4人均摊）</div>
+      <div class="tip-body">
+        住宿（4晚均摊）：约 ¥1500–2000/晚/间 × 2间 = ¥3000–4000/天/人<br>
+        活动：青之洞窟¥350 · 冲浪课¥550 · SUP¥300<br>
+        餐饮：¥200–400/人/天<br>
+        交通：租车约¥1000/天共4人均摊约¥250/人/天<br>
+        <strong>全程人均活动 + 餐饮预算约 ¥3000–5000（不含住宿机票）</strong>
+      </div>
+    </div>
+    <div class="tip">
+      <div class="tip-title">🎫 需要提前预约的</div>
+      <div class="tip-body">
+        ① 租车 — 提前 1 个月！旺季抢手<br>
+        ② 青之洞窟浮潜 — 提前 1–2 周（Klook / KKday）<br>
+        ③ 冲浪课 — 提前 1 周<br>
+        ④ 酒店 — 现在就订！Vessel 和 Renaissance 旺季很快满
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center;padding:2rem 0;font-size:12px;color:#aaa">
+    Made with 💙 for 4 best friends · Jun 2025 Okinawa
+  </div>
+</div>
+
+<script>
+  var votes = [0,0,0,0,0,0,0,0];
+  var voted = [false,false,false,false,false,false,false,false];
+  var max = 4;
+
+  function vote(i) {
+    var btn = document.getElementById('btn-' + i);
+    if (voted[i]) {
+      votes[i]--;
+      voted[i] = false;
+      btn.classList.remove('voted');
+    } else {
+      votes[i]++;
+      voted[i] = true;
+      btn.classList.add('voted');
+    }
+    var maxV = Math.max.apply(null, votes) || 1;
+    for (var j = 0; j < votes.length; j++) {
+      document.getElementById('count-' + j).textContent = votes[j] + ' 人感兴趣';
+      document.getElementById('fill-' + j).style.width = (votes[j] / maxV * 100) + '%';
+    }
+  }
+
+  function switchTab(name, el) {
+    document.querySelectorAll('.tab').forEach(function(t) { t.classList.remove('active'); });
+    document.querySelectorAll('.panel').forEach(function(p) { p.classList.remove('active'); });
+    document.getElementById(name).classList.add('active');
+    el.classList.add('active');
+  }
+</script>
+</body>
+</html>
