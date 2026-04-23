@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🌊 冲绳4天闺蜜行 · Jun 2026</title>
+<title>🌊 蜜月姐妹游 · 冲绳 Jun 2026</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,'PingFang SC','Hiragino Sans GB',sans-serif;background:#f4f2ed;color:#1a1a1a;min-height:100vh}
@@ -11,22 +11,42 @@ body{font-family:-apple-system,'PingFang SC','Hiragino Sans GB',sans-serif;backg
 .hero::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:48px;background:#f4f2ed;border-radius:60% 60% 0 0/100% 100% 0 0}
 .hero-badge{display:inline-block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);border-radius:20px;padding:4px 14px;font-size:12px;margin-bottom:12px}
 .hero-title{font-size:28px;font-weight:700;margin-bottom:5px}
-.hero-sub{font-size:14px;opacity:.8;margin-bottom:20px}
+.hero-sub{font-size:14px;opacity:.8;margin-bottom:4px}
+.hero-sub2{font-size:13px;opacity:.65;margin-bottom:18px}
 .chips{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
 .chip{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);border-radius:20px;padding:5px 14px;font-size:12px}
 .container{max-width:680px;margin:0 auto;padding:1.5rem 1rem 3rem}
+
+/* PERSONA CARDS */
+.persona-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:1.25rem}
+.persona{background:white;border-radius:14px;padding:1rem;box-shadow:0 1px 6px rgba(0,0,0,.06)}
+.persona.bride{border:2px solid #f472b6;background:linear-gradient(135deg,#fff,#fdf2f8)}
+.persona-name{font-size:15px;font-weight:700;margin-bottom:2px}
+.persona-type{font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;display:inline-block;margin-bottom:6px}
+.persona-desc{font-size:12px;color:#666;line-height:1.6}
+.bride-badge{font-size:10px;background:#fce7f3;color:#be185d;padding:2px 8px;border-radius:20px;margin-bottom:6px;display:inline-block}
+.pt-enfj{background:#dbeafe;color:#1d4ed8}
+.pt-enfp{background:#ede9fe;color:#7c3aed}
+.pt-isfj{background:#dcfce7;color:#166534}
+
 .notice{background:#fffbeb;border:1px solid #fbbf24;border-radius:14px;padding:1rem 1.25rem;margin-bottom:1rem}
 .notice-title{font-size:13px;font-weight:600;color:#92400e;margin-bottom:5px}
 .notice-body{font-size:13px;color:#78350f;line-height:1.7}
 .notice-green{background:#f0fdf4;border-color:#86efac}
 .notice-green .notice-title{color:#166534}
 .notice-green .notice-body{color:#14532d}
+.notice-pink{background:#fdf2f8;border-color:#f9a8d4}
+.notice-pink .notice-title{color:#9d174d}
+.notice-pink .notice-body{color:#831843}
+
 .tabs{display:flex;background:white;border-radius:14px;padding:4px;gap:2px;margin-bottom:1.25rem;box-shadow:0 1px 6px rgba(0,0,0,.07)}
-.tab{flex:1;padding:9px 4px;font-size:12px;text-align:center;cursor:pointer;border:none;background:none;color:#888;border-radius:10px;font-weight:500;transition:all .2s;line-height:1.3}
+.tab{flex:1;padding:9px 4px;font-size:11px;text-align:center;cursor:pointer;border:none;background:none;color:#888;border-radius:10px;font-weight:500;transition:all .2s;line-height:1.3}
 .tab.active{background:#083d52;color:white}
 .panel{display:none}
 .panel.active{display:block}
 .sec-divider{font-size:12px;font-weight:600;color:#083d52;border-bottom:1px solid #e0ddd6;padding-bottom:8px;margin:1.5rem 0 1rem}
+
+/* CARDS */
 .card{background:white;border-radius:14px;padding:1.25rem;margin-bottom:1rem;box-shadow:0 1px 6px rgba(0,0,0,.06)}
 .card.top-pick{border:2px solid #0e6b7a}
 .card-hd{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:10px}
@@ -41,6 +61,7 @@ body{font-family:-apple-system,'PingFang SC','Hiragino Sans GB',sans-serif;backg
 .b-amber{background:#fef9c3;color:#a16207}
 .b-red{background:#fee2e2;color:#b91c1c}
 .b-pink{background:#fce7f3;color:#be185d}
+.b-green{background:#dcfce7;color:#166534}
 .meta{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0}
 .mi{font-size:12px;color:#666}
 .mi strong{color:#1a1a1a}
@@ -49,11 +70,23 @@ body{font-family:-apple-system,'PingFang SC','Hiragino Sans GB',sans-serif;backg
 .reason{font-size:13px;color:#555;line-height:1.7;border-top:1px solid #f0f0f0;padding-top:10px;margin-top:10px}
 .links{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
 .lnk{font-size:12px;color:#0e6b7a;text-decoration:none;border:1px solid #99f6e4;padding:4px 12px;border-radius:20px;display:inline-block}
+
+/* WHO LIKES */
+.who-likes{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;padding-top:8px;border-top:1px dashed #e5e7eb}
+.wl-chip{font-size:11px;padding:3px 10px;border-radius:20px;font-weight:500}
+.wl-enfj{background:#dbeafe;color:#1d4ed8}
+.wl-enfp{background:#ede9fe;color:#7c3aed}
+.wl-isfj{background:#dcfce7;color:#166534}
+.wl-all{background:#f3f4f6;color:#374151}
+.wl-label{font-size:11px;color:#aaa;align-self:center}
+
 .type-toggle{display:flex;gap:8px;margin-bottom:1.25rem;flex-wrap:wrap}
 .type-btn{padding:7px 18px;font-size:13px;border-radius:20px;border:1px solid #d1d5db;background:white;color:#555;cursor:pointer;transition:all .15s;font-weight:500}
 .type-btn.active{background:#083d52;color:white;border-color:#083d52}
 .hotel-section{display:none}
 .hotel-section.active{display:block}
+
+/* TIMELINE */
 .day-card{background:white;border-radius:14px;margin-bottom:1rem;overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,.06)}
 .day-hd{background:#083d52;color:white;padding:.875rem 1.25rem;display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
 .day-title{font-size:14px;font-weight:600}
@@ -64,9 +97,16 @@ body{font-family:-apple-system,'PingFang SC','Hiragino Sans GB',sans-serif;backg
 .tl-body{padding:10px 14px;flex:1}
 .tl-title{font-size:13px;font-weight:600}
 .tl-detail{font-size:12px;color:#777;margin-top:3px;line-height:1.5}
+.tl-who{font-size:11px;margin-top:5px;display:flex;gap:5px;flex-wrap:wrap}
 .tl-special{background:#f0fdf4;border-left:3px solid #22c55e}
 .tl-special .tl-title{color:#166534}
+.tl-bride{background:#fdf2f8;border-left:3px solid #f472b6}
+.tl-bride .tl-title{color:#9d174d}
 .tl-depart{background:#eff6ff;border-left:3px solid #3b82f6}
+.tl-wave{background:#fff7ed;border-left:3px solid #fb923c}
+.tl-wave .tl-title{color:#c2410c}
+
+/* VOTE */
 .vote-card{background:white;border-radius:14px;margin-bottom:10px;overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,.06)}
 .vote-body{padding:1rem 1.25rem .75rem}
 .vote-foot{padding:0 1.25rem .875rem;display:flex;align-items:center;justify-content:space-between;gap:8px}
@@ -76,6 +116,7 @@ body{font-family:-apple-system,'PingFang SC','Hiragino Sans GB',sans-serif;backg
 .vbtn{border:none;background:none;font-size:22px;cursor:pointer;padding:3px 8px;border-radius:8px;transition:background .15s}
 .vbtn:hover{background:#f0f9ff}
 .vbtn.on{background:#dbeafe}
+
 .tip{background:white;border-radius:12px;padding:1rem 1.25rem;margin-bottom:8px;box-shadow:0 1px 4px rgba(0,0,0,.05)}
 .tip-title{font-size:13px;font-weight:600;margin-bottom:4px}
 .tip-body{font-size:13px;color:#555;line-height:1.7}
@@ -93,82 +134,209 @@ body{font-family:-apple-system,'PingFang SC','Hiragino Sans GB',sans-serif;backg
 .t-text{flex:1}
 .t-title{font-size:13px;font-weight:600}
 .t-detail{font-size:12px;color:#777;margin-top:3px;line-height:1.5}
-@media(max-width:400px){.hero-title{font-size:22px}.chips{flex-direction:column;align-items:center}}
+@media(max-width:400px){.hero-title{font-size:22px}.persona-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <div class="hero">
-  <div class="hero-badge">✈️ 北京 → 东京 → 冲绳 → 大阪 → 北京</div>
+  <div class="hero-badge">🎊 梦琦的婚后蜜月姐妹游</div>
   <h1 class="hero-title">🌊 冲绳4天闺蜜行</h1>
-  <p class="hero-sub">4人 · 30岁 · 冲浪 / 海 / 美食 / 骑行 · 2026年6月</p>
+  <p class="hero-sub">梦琦 · 骊骊 · 粘粘 · 畅畅</p>
+  <p class="hero-sub2">✈️ 北京 → 东京 → 冲绳 → 大阪 → 北京 · 2026年6月</p>
   <div class="chips">
     <span class="chip">📅 在岛 6/19–6/23</span>
-    <span class="chip">🌤 梅雨末期→入夏</span>
-    <span class="chip">☀️ 约28–30°C</span>
-    <span class="chip">🚕 无需驾照·打车+酒店活动</span>
+    <span class="chip">🌤 梅雨末→入夏</span>
+    <span class="chip">🏄 3人有冲浪基础</span>
+    <span class="chip">🚕 无需驾照</span>
   </div>
 </div>
+
 <div class="container">
+
+  <!-- PERSONA CARDS -->
+  <p style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#999;margin-bottom:.75rem">四位主角</p>
+  <div class="persona-grid">
+    <div class="persona bride">
+      <div class="bride-badge">👰 新娘子</div>
+      <div class="persona-name">梦琦</div>
+      <span class="persona-type pt-enfj">ENFJ · 主导者</span>
+      <div class="persona-desc">温暖有感染力，喜欢照顾大家，刚办完婚礼——这趟她最需要彻底放松。有冲浪基础，能抓1m的浪。</div>
+    </div>
+    <div class="persona">
+      <div style="height:22px"></div>
+      <div class="persona-name">骊骊</div>
+      <span class="persona-type pt-enfp">ENFP · 探险家</span>
+      <div class="persona-desc">活力满满，喜欢新鲜刺激，据说偏爱黑皮外国小帅哥 😏 可能会来生理期，冲浪待定，但其他活动挡不住她。</div>
+    </div>
+    <div class="persona">
+      <div style="height:22px"></div>
+      <div class="persona-name">粘粘</div>
+      <span class="persona-type pt-isfj">ISFJ · 守护者</span>
+      <div class="persona-desc">细腻体贴，喜欢有仪式感的美好时光，不追求刺激但享受大自然和慢节奏。有冲浪基础，能抓1m浪。</div>
+    </div>
+    <div class="persona">
+      <div style="height:22px"></div>
+      <div class="persona-name">畅畅</div>
+      <span class="persona-type pt-enfp">ENFP · 探险家</span>
+      <div class="persona-desc">热情奔放，随时ready新体验，和骊骊一起是全场的气氛担当。有冲浪基础，能抓1m浪。</div>
+    </div>
+  </div>
+
+  <div class="notice notice-pink">
+    <div class="notice-title">🏄 冲浪条件说明 · 灵活应变</div>
+    <div class="notice-body">
+      粘粘、畅畅、梦琦有冲浪基础，能抓 <strong>1m 左右的浪</strong>。浪太平或太大都不行，要看当天浪况决定。<br><br>
+      <strong>如果当天浪况不好</strong> → 全部改去青之洞窟浮潜 or SUP，一点不亏<br>
+      <strong>如果骊骊来生理期</strong> → 她去玻璃底独木舟 / 帆船 / 海钓（完全不沾水的项目），说不定能搭上外国帅哥教练 😏<br>
+      <strong>冲浪排 Day 3 下午</strong>（梅雨基本结束，晴天概率最高，浪况更稳定）
+    </div>
+  </div>
+
   <div class="w-row">
     <div class="w-chip"><div class="w-label">气温</div><div class="w-value">28–30°</div><div class="w-note">防晒必备</div></div>
     <div class="w-chip"><div class="w-label">海水温度</div><div class="w-value">26–27°</div><div class="w-note">游泳最舒适</div></div>
     <div class="w-chip"><div class="w-label">日落时间</div><div class="w-value">19:35</div><div class="w-note">全年最长白昼</div></div>
   </div>
+
   <div class="notice">
-    <div class="notice-title">⚠️ 6月天气：梅雨末期，越往后越晴</div>
-    <div class="notice-body">冲绳梅雨通常 <strong>6月20日前后结束</strong>，前两天（6/19–20）可能有阵雨，<strong>6/21–23 大概率转晴</strong>，最重要的海上活动放后半程更稳。浮潜/潜水小雨也能照常进行。</div>
+    <div class="notice-title">⚠️ 天气：梅雨末期，越往后越晴</div>
+    <div class="notice-body">6/19–20 可能阵雨，<strong>6/21–23 大概率转晴</strong>。重头活动放后半程更稳。浮潜/潜水小雨也能照常。</div>
   </div>
-  <div class="notice notice-green">
-    <div class="notice-title">🚕 无国际驾照的出行方案</div>
-    <div class="notice-body"><strong>核心策略：选大型度假村，减少移动</strong><br><br>
-    · 机场→酒店：利木津巴士 or 打车（4人分摊很划算）<br>
-    · 酒店内：私人海滩/泳池/餐厅/水上活动一站搞定<br>
-    · 外出活动：Klook预约含接送的团，从酒店门口出发<br>
-    · 骑行：租酒店自行车/附近电动车，沿海骑不上公路</div>
-  </div>
+
   <div class="tabs">
-    <button class="tab active" onclick="switchTab('hotels',this)">🏨 住宿</button>
-    <button class="tab" onclick="switchTab('itinerary',this)">📅 行程</button>
+    <button class="tab active" onclick="switchTab('itinerary',this)">📅 行程</button>
+    <button class="tab" onclick="switchTab('hotels',this)">🏨 住宿</button>
     <button class="tab" onclick="switchTab('vote',this)">🗳 活动投票</button>
     <button class="tab" onclick="switchTab('tips',this)">💡 贴士</button>
   </div>
 
+  <!-- ITINERARY -->
+  <div id="itinerary" class="panel active">
+
+    <div class="day-card">
+      <div class="day-hd"><div><div class="day-title">Day 1 · 6月19日（周五）· 落地 + 第一个日落</div><div class="day-sub">NH477 东京羽田→那霸 15:25–18:00 · 轻松落地日</div></div><span class="badge b-amber" style="font-size:10px">可能阵雨</span></div>
+      <div class="tl-row"><div class="tl-time">18:00</div><div class="tl-body"><div class="tl-title">✈️ 抵达那霸 · 国内线航站楼</div><div class="tl-detail">叫 DiDi / 出租车 → 北谷约25分钟，恩纳村约60–70分钟。大行李先寄酒店</div></div></div>
+      <div class="tl-row tl-bride"><div class="tl-time">19:35</div><div class="tl-body"><div class="tl-title">🌅 夏至前夕 · 第一个日落</div><div class="tl-detail">到酒店放下行李立刻去海边，看全年最晚的日落。这是梦琦婚后第一个海边日落 💕</div>
+        <div class="tl-who"><span class="wl-label">✨</span><span class="wl-chip wl-enfj">梦琦 会哭的</span><span class="wl-chip wl-isfj">粘粘 拍照构图</span><span class="wl-chip wl-enfp">骊骊畅畅 拉横幅</span></div>
+      </div></div>
+      <div class="tl-row"><div class="tl-time">20:30</div><div class="tl-body"><div class="tl-title">🍜 周边觅食 · 随心所欲</div><div class="tl-detail">第一晚不安排活动，冲绳面/居酒屋/海鲜，就是好好坐着吃喝聊天</div></div></div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-hd"><div><div class="day-title">Day 2 · 6月20日（周六）· 青之洞窟 + 夏至之夜</div><div class="day-sub">今天是夏至 · 梅雨最后阶段 · DoubleTree 周六有烟花</div></div><span class="badge b-amber" style="font-size:10px">梅雨末</span></div>
+      <div class="tl-row"><div class="tl-time">09:00</div><div class="tl-body"><div class="tl-title">🤿 青之洞窟浮潜 / 体验潜水</div><div class="tl-detail">Klook 预约含接送的团，约2–3小时，GoPro免费，小雨照常。4人可包一条船私享</div>
+        <div class="tl-who"><span class="wl-label">最爱谁</span><span class="wl-chip wl-all">全员都爱</span><span class="wl-chip wl-isfj">粘粘 会看到最多鱼</span><span class="wl-chip wl-enfp">骊骊 抓住帅哥教练拍照</span></div>
+      </div></div>
+      <div class="tl-row"><div class="tl-time">12:30</div><div class="tl-body"><div class="tl-title">🍜 午饭 · 浮潜附近或回酒店</div><div class="tl-detail">浮潜很饿，就近解决，吃完可以回酒店泳池躺着消化</div></div></div>
+      <div class="tl-row"><div class="tl-time">15:00</div><div class="tl-body"><div class="tl-title">🏖 下午 · 泳池/海滩自由时光</div><div class="tl-detail">随便泡，或骑行乱逛，或在房间打扮</div></div></div>
+      <div class="tl-row tl-special"><div class="tl-time">19:35</div><div class="tl-body"><div class="tl-title">🌅 夏至日落 · 全年最长的一天</div><div class="tl-detail">今天是夏至！提前占好机位，四个人举杯。骊骊和畅畅负责拍视频，粘粘负责提前踩点，梦琦负责哭</div>
+        <div class="tl-who"><span class="wl-chip wl-enfj">梦琦 仪式感MAX</span><span class="wl-chip wl-isfj">粘粘 早到占位</span><span class="wl-chip wl-enfp">骊骊畅畅 起哄</span></div>
+      </div></div>
+      <div class="tl-row tl-bride"><div class="tl-time">夜间</div><div class="tl-body"><div class="tl-title">🎆 住 DoubleTree 的话 · 周六烟花！</div><div class="tl-detail">北谷希尔顿逸林每周六晚放烟花，从屋顶酒吧看，梦琦的婚后第一场烟花 🎆</div>
+        <div class="tl-who"><span class="wl-chip wl-enfj">梦琦 超感动</span><span class="wl-chip wl-all">全员点满调酒</span></div>
+      </div></div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-hd"><div><div class="day-title">Day 3 · 6月21日（周日）· 冲浪 + 骑行 + 万座毛</div><div class="day-sub">梅雨基本结束 · 转晴 · 看浪况决定冲浪</div></div><span class="badge b-teal" style="font-size:10px">转晴</span></div>
+      <div class="tl-row tl-wave"><div class="tl-time">查浪况</div><div class="tl-body"><div class="tl-title">🌊 冲浪计划 · 当天早晨确认浪况</div><div class="tl-detail">梅雨结束后浪况更稳定。目标是 0.8–1.5m 的浪，太平或太大直接改其他活动，不强求</div></div></div>
+      <div class="tl-row"><div class="tl-time">09:00</div><div class="tl-body">
+        <div class="tl-title">🏄 冲浪课（浪况OK时）</div>
+        <div class="tl-detail">残波海滩，含接送约2小时。粘粘畅畅梦琦上，骊骊根据状态决定</div>
+        <div class="tl-who"><span class="wl-label">冲浪</span><span class="wl-chip wl-enfj">梦琦</span><span class="wl-chip wl-isfj">粘粘</span><span class="wl-chip wl-enfp">畅畅</span></div>
+      </div></div>
+      <div class="tl-row tl-bride"><div class="tl-time">同时段</div><div class="tl-body">
+        <div class="tl-title">🚣 骊骊专属 · 玻璃底独木舟 / 帆船体验</div>
+        <div class="tl-detail">生理期或不想冲浪 → 预约玻璃底独木舟或帆船日游（北谷 or 恩纳村出发），教练大概率是外国帅哥 😏 完全不沾水，坐着就能看珊瑚</div>
+        <div class="tl-who"><span class="wl-chip wl-enfp">骊骊 独享</span><span class="wl-chip" style="background:#fef3c7;color:#92400e">可能有帅哥</span></div>
+      </div></div>
+      <div class="tl-row"><div class="tl-time">12:00</div><div class="tl-body"><div class="tl-title">🍱 合流午饭 · 都回来了</div><div class="tl-detail">骊骊负责汇报帅哥情况，大家负责吃东西</div></div></div>
+      <div class="tl-row"><div class="tl-time">14:30</div><div class="tl-body">
+        <div class="tl-title">🚴 沿海骑行 · 随停随走</div>
+        <div class="tl-detail">租电动自行车，沿海边路线，路边咖啡馆随时停，出片，有风</div>
+        <div class="tl-who"><span class="wl-chip wl-isfj">粘粘 提前查好咖啡馆</span><span class="wl-chip wl-enfp">骊骊畅畅 说走就走</span></div>
+      </div></div>
+      <div class="tl-row tl-special"><div class="tl-time">17:30</div><div class="tl-body"><div class="tl-title">🌅 万座毛象鼻岩 · 冲绳TOP日落机位</div><div class="tl-detail">打车10分钟，珊瑚礁悬崖+夕阳，冲绳最拍的日落，必去</div></div></div>
+      <div class="tl-row"><div class="tl-time">晚上</div><div class="tl-body"><div class="tl-title">🍷 酒店海景晚餐 · 懒懒的</div><div class="tl-detail">今天够累了，酒店吃，不出去折腾</div></div></div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-hd"><div><div class="day-title">Day 4 · 6月22日（周一）· SUP + 放空 + 夜池</div><div class="day-sub">大概率晴天 · 最后完整的岛上日 · 最轻松最惬意</div></div><span class="badge b-teal" style="font-size:10px">☀️晴天</span></div>
+      <div class="tl-row"><div class="tl-time">07:30</div><div class="tl-body">
+        <div class="tl-title">🛶 清晨 SUP / Clear SUP</div>
+        <div class="tl-detail">人少水清，透明板脚下能看到珊瑚和鱼，清晨海面如镜，出片仙气十足</div>
+        <div class="tl-who"><span class="wl-chip wl-isfj">粘粘 最喜欢这种安静</span><span class="wl-chip wl-enfj">梦琦 拍最好看的照片</span></div>
+      </div></div>
+      <div class="tl-row"><div class="tl-time">09:30</div><div class="tl-body">
+        <div class="tl-title">☕ 海边咖啡馆 · 发呆晒太阳</div>
+        <div class="tl-detail">找落地窗对着海的咖啡馆，点冰饮，什么都不想，补前几天的觉</div>
+        <div class="tl-who"><span class="wl-chip wl-isfj">粘粘 提前查好</span><span class="wl-chip wl-enfj">梦琦 写日记</span><span class="wl-chip wl-enfp">骊骊畅畅 聊天起哄</span></div>
+      </div></div>
+      <div class="tl-row"><div class="tl-time">14:00</div><div class="tl-body"><div class="tl-title">🏖 私人海滩 · 彻底放空</div><div class="tl-detail">铺沙滩垫，喝椰子，晒太阳，发朋友圈，聊天，什么都不用计划</div></div></div>
+      <div class="tl-row tl-bride"><div class="tl-time">夜间</div><div class="tl-body">
+        <div class="tl-title">🌊 夜间泳池 + 无限调酒 · 最后一夜</div>
+        <div class="tl-detail">18:00–21:00 泡在夜池，点满热带调酒，四个人说说这4天，看星星</div>
+        <div class="tl-who"><span class="wl-chip wl-enfj">梦琦 发表感言</span><span class="wl-chip wl-isfj">粘粘 拍每个人</span><span class="wl-chip wl-enfp">骊骊畅畅 干杯干杯</span></div>
+      </div></div>
+    </div>
+
+    <div class="day-card">
+      <div class="day-hd"><div><div class="day-title">Day 5 · 6月23日（周二）· 离岛日</div><div class="day-sub">NH2528 那霸→大阪 15:00–16:55 · 国内线出发</div></div><span class="badge b-red" style="font-size:10px">离岛</span></div>
+      <div class="tl-row"><div class="tl-time">上午</div><div class="tl-body"><div class="tl-title">🏖 最后的海边时光</div><div class="tl-detail">退房11:00，寄存行李，最后泡一会儿泳池/海滩，或者直接躺着不动</div></div></div>
+      <div class="tl-row tl-depart"><div class="tl-time">12:00</div><div class="tl-body"><div class="tl-title">🚕 出发那霸机场 · ⚠️ 国内线航站楼</div><div class="tl-detail">恩纳村出发约60–70分钟，建议12:00前动身。NH2528实际承运6J（星悦航空）</div></div></div>
+      <div class="tl-row"><div class="tl-time">13:00</div><div class="tl-body"><div class="tl-title">🛍 机场扫货</div><div class="tl-detail">泡盛酒 · 黑糖 · 紫薯饼干 · 海盐巧克力 · 风狮爷 · ORION啤酒手信</div></div></div>
+      <div class="tl-row tl-depart"><div class="tl-time">15:00</div><div class="tl-body"><div class="tl-title">✈️ 那霸→大阪 NH2528</div><div class="tl-detail">16:55抵关西 · 次日6/24 NH979 09:30飞北京，提前订好关西机场附近酒店</div></div></div>
+    </div>
+
+    <div class="notice notice-pink" style="margin-top:1rem">
+      <div class="notice-title">💕 梦琦蜜月系列彩蛋</div>
+      <div class="notice-body">
+        Day 1 · 婚后第一个海边日落 🌅<br>
+        Day 2 · 婚后第一场烟花（住 DoubleTree 的话）🎆<br>
+        Day 4 · 四姐妹最后一夜夜泳，梦琦发表蜜月感言 🥂<br><br>
+        建议大家提前想好送梦琦的小惊喜，粘粘和畅畅骊骊偷偷安排 😏
+      </div>
+    </div>
+  </div>
+
   <!-- HOTELS -->
-  <div id="hotels" class="panel active">
-    <p style="font-size:13px;color:#555;margin-bottom:1rem;line-height:1.6">根据「不想奔波」，提供两种住法，大家选！</p>
+  <div id="hotels" class="panel">
+    <p style="font-size:13px;color:#555;margin-bottom:1rem;line-height:1.6">两种住法，大家选！</p>
     <div class="type-toggle">
       <button class="type-btn active" onclick="switchHotel('stay-one',this)">🏝 全程一个地方（最省心）</button>
       <button class="type-btn" onclick="switchHotel('stay-two',this)">🔄 换一次酒店</button>
     </div>
 
     <div id="stay-one" class="hotel-section active">
-      <p class="sec-divider">🌴 全程住恩纳村（推荐！无车最适合）</p>
-      <p style="font-size:13px;color:#555;line-height:1.65;margin-bottom:1rem">机场打一次车到酒店，之后4天不用动。大型度假村自带一切，完全不需要开车。</p>
+      <p class="sec-divider">🌴 全程住恩纳村（无车最推荐）</p>
+      <p style="font-size:13px;color:#555;line-height:1.65;margin-bottom:1rem">机场打一次车到酒店，之后4天不动。大型度假村自带沙滩/泳池/活动/餐厅，完全不需要开车。</p>
 
       <div class="card top-pick">
-        <div class="card-hd"><div><div class="card-name">凯悦濑良垣岛 Hyatt Regency Seragaki Island</div><div class="card-loc">恩纳村 · 私人岛屿度假村</div></div><span class="badge b-teal">首推·最惬意</span></div>
+        <div class="card-hd"><div><div class="card-name">凯悦濑良垣岛 Hyatt Regency Seragaki Island</div><div class="card-loc">恩纳村 · 私人岛屿度假村</div></div><span class="badge b-teal">首推</span></div>
         <div class="stars">★★★★★</div><div class="rating-line">全球凯悦品牌 · 2026年6/19起开放夜间泳池</div>
         <div class="meta"><div class="mi">💴 <strong>约¥2000–3000</strong>/晚/间</div><div class="mi">🏝 跨桥私人岛</div><div class="mi">🚕 机场约50分钟</div></div>
         <div class="tags"><span class="tag">私人岛屿</span><span class="tag">无边际泳池</span><span class="tag">夜间泳池6/19开放</span><span class="tag">私人海滩</span><span class="tag">6家餐厅</span><span class="tag">全包饮品Pass</span></div>
-        <div class="reason">📌 整个度假村就在一座小岛上，过一座桥与外界隔绝。无边际泳池直连大海视觉极震撼。<strong>重点：你们到岛当天（6/19）正是2026年夜间泳池首日开放</strong>，有 Beverage Pass 可以在各个吧台无限喝冲绳生啤和热带调酒，泡池看星星是这趟旅行最难忘的时刻。</div>
+        <div class="reason">📌 整个度假村就在私人小岛上，过一座桥与外界隔绝。<strong>你们到岛当天（6/19）正是2026年夜间泳池首日开放</strong>，有 Beverage Pass 可以无限喝冲绳生啤和热带调酒，泡池看星星是梦琦婚后蜜月的最佳结尾。</div>
+        <div class="who-likes"><span class="wl-label">谁最爱</span><span class="wl-chip wl-enfj">梦琦 最需要这种放松</span><span class="wl-chip wl-isfj">粘粘 沉浸式度假感</span><span class="wl-chip wl-enfp">骊骊畅畅 夜池嗨起来</span></div>
         <div class="links"><a class="lnk" href="https://www.hyatt.com/hyatt-regency/en-US/okaro-hyatt-regency-seragaki-island-okinawa" target="_blank">凯悦官网 ↗</a><a class="lnk" href="https://hotels.ctrip.com/hotel/onna35725" target="_blank">携程查价 ↗</a></div>
       </div>
 
       <div class="card top-pick">
-        <div class="card-hd"><div><div class="card-name">Halekulani Okinawa 海丽客兰尼</div><div class="card-loc">恩纳村 · 福布斯旅游指南五星</div></div><span class="badge b-purple">最奢·福布斯五星</span></div>
+        <div class="card-hd"><div><div class="card-name">Halekulani Okinawa 海丽客兰尼</div><div class="card-loc">恩纳村 · 福布斯旅游指南五星</div></div><span class="badge b-purple">最奢</span></div>
         <div class="stars">★★★★★</div><div class="rating-line">连续多年福布斯旅游指南五星 · 冲绳顶奢之选</div>
         <div class="meta"><div class="mi">💴 <strong>约¥2500–4000</strong>/晚/间</div><div class="mi">🏖 私人海滩</div><div class="mi">🌊 面向一英里海岸线</div></div>
-        <div class="tags"><span class="tag">福布斯五星</span><span class="tag">标志性兰花泳池</span><span class="tag">3座户外泳池+室内泳池</span><span class="tag">SPA水疗</span><span class="tag">全海景客房</span></div>
-        <div class="reason">📌 夏威夷百年奢华酒店在海外开的第一家。"七度白"轻奢配色配上蓝透的玻璃海，躺在床上就能看海。兰花泳池是全球最具辨识度的泳池之一，出片率极高。闺蜜行最适合这种「什么都不用做」的顶奢惬意感。</div>
-        <div class="links"><a class="lnk" href="https://www.halekulaniokinawa.com/" target="_blank">官网 ↗</a><a class="lnk" href="https://hotels.ctrip.com/hotel/onna35725" target="_blank">携程查价 ↗</a></div>
+        <div class="tags"><span class="tag">福布斯五星</span><span class="tag">标志性兰花泳池</span><span class="tag">3座户外+室内泳池</span><span class="tag">SPA水疗</span><span class="tag">全海景客房</span></div>
+        <div class="reason">📌 夏威夷百年奢华酒店海外第一家。兰花泳池全球最具辨识度，"七度白"配色+蓝透玻璃海，躺在床上就能看海。梦琦蜜月游，配这里刚刚好。</div>
+        <div class="who-likes"><span class="wl-label">谁最爱</span><span class="wl-chip wl-enfj">梦琦 蜜月必须最好</span><span class="wl-chip wl-isfj">粘粘 兰花池拍到手软</span></div>
+        <div class="links"><a class="lnk" href="https://www.halekulaniokinawa.com/" target="_blank">官网 ↗</a><a class="lnk" href="https://hotels.ctrip.com/hotel/onna35725" target="_blank">携程 ↗</a></div>
       </div>
 
       <div class="card">
         <div class="card-hd"><div><div class="card-name">Renaissance Okinawa Resort 万丽</div><div class="card-loc">恩纳村 · 万豪旗下 · 私人海滩</div></div><span class="badge b-teal">性价比首选</span></div>
-        <div class="stars">★★★★★</div><div class="rating-line">万豪旗下 · 恩纳村口碑最稳 · 积分可用</div>
+        <div class="stars">★★★★★</div>
         <div class="meta"><div class="mi">💴 <strong>约¥1500–2200</strong>/晚/间</div><div class="mi">🏖 私人海滩</div></div>
-        <div class="tags"><span class="tag">私人海滩</span><span class="tag">水上活动直约</span><span class="tag">游艇码头</span><span class="tag">多个泳池</span><span class="tag">万豪积分可用</span></div>
-        <div class="reason">📌 预算有限的最优解。酒店内直接预约浮潜/SUP/皮划艇，不用出门另找。万豪会员可用积分抵扣，性价比最高。</div>
+        <div class="tags"><span class="tag">私人海滩</span><span class="tag">水上活动直约</span><span class="tag">多个泳池</span><span class="tag">万豪积分可用</span></div>
+        <div class="reason">📌 预算有限的最优解。酒店内直接预约浮潜/SUP/皮划艇，不用出门另找。万豪积分可抵，性价比最高。</div>
         <div class="links"><a class="lnk" href="https://www.marriott.com/en-us/hotels/okarw-renaissance-okinawa-resort/overview/" target="_blank">万豪官网 ↗</a><a class="lnk" href="https://hotels.ctrip.com/hotel/onna35725" target="_blank">携程 ↗</a></div>
       </div>
 
@@ -176,27 +344,19 @@ body{font-family:-apple-system,'PingFang SC','Hiragino Sans GB',sans-serif;backg
         <div class="card-hd"><div><div class="card-name">ANA InterContinental Manza Beach 洲际万座</div><div class="card-loc">恩纳村万座海滨 · 全日空洲际</div></div><span class="badge b-amber">海湾最美</span></div>
         <div class="stars">★★★★★</div>
         <div class="meta"><div class="mi">💴 <strong>约¥1800–2800</strong>/晚/间</div><div class="mi">🌊 万座海湾独享</div></div>
-        <div class="tags"><span class="tag">万座海湾绝景</span><span class="tag">水上活动全套</span><span class="tag">温泉SPA</span><span class="tag">多个餐厅</span></div>
-        <div class="reason">📌 万座海湾是冲绳水质最清澈的海湾之一，潜水环境极佳。适合喜欢大品牌五星安全感又对海景有高要求的风格。</div>
+        <div class="tags"><span class="tag">万座海湾绝景</span><span class="tag">水上活动全套</span><span class="tag">温泉SPA</span></div>
+        <div class="reason">📌 万座海湾冲绳水质最清澈，潜水环境顶级，海景大气磅礴。</div>
         <div class="links"><a class="lnk" href="https://www.ihg.com/intercontinental/hotels/us/en/onna/okamc/hoteldetail" target="_blank">IHG官网 ↗</a></div>
       </div>
 
-      <p class="sec-divider">🏡 Airbnb整栋民宿（4人合住更自在）</p>
-
+      <p class="sec-divider">🏡 Airbnb整栋（4人合住更自在）</p>
       <div class="card">
         <div class="card-hd"><div><div class="card-name">Cordial Stay II · 恩纳村海边整栋</div><div class="card-loc">恩纳村 · 步行到海滩 · 最多8人</div></div><span class="badge b-pink">Airbnb整栋</span></div>
         <div class="meta"><div class="mi">💴 <strong>约¥700–1200</strong>/晚整栋（4人均摊¥175–300/人）</div></div>
-        <div class="tags"><span class="tag">3卧室整栋</span><span class="tag">厨房可自炊</span><span class="tag">免费停车</span><span class="tag">海边步行圈</span><span class="tag">恩纳之驿附近</span></div>
-        <div class="reason">📌 四个闺蜜独享一栋，有大客厅，可以自己下厨或叫外卖，晚上喝酒聊天不影响他人。均摊下来每人每晚比酒店便宜一半，省下的钱用来升级活动体验。</div>
+        <div class="tags"><span class="tag">3卧室整栋</span><span class="tag">厨房</span><span class="tag">免费停车</span><span class="tag">海边步行</span></div>
+        <div class="reason">📌 四姐妹独享一栋，有大客厅可以聊天喝酒不影响任何人，均摊下来是酒店价格的一半。</div>
+        <div class="who-likes"><span class="wl-label">谁最爱</span><span class="wl-chip wl-enfp">骊骊畅畅 大家庭氛围</span><span class="wl-chip wl-isfj">粘粘 安心自在</span></div>
         <div class="links"><a class="lnk" href="https://www.airbnb.cn/rooms/1401209560330658426" target="_blank">Airbnb查看 ↗</a></div>
-      </div>
-
-      <div class="card">
-        <div class="card-hd"><div><div class="card-name">北谷珊瑚海滨整栋</div><div class="card-loc">北谷町 · 美国村步行圈 · 最多6人</div></div><span class="badge b-pink">Airbnb整栋</span></div>
-        <div class="meta"><div class="mi">💴 <strong>约¥800–1300</strong>/晚整栋</div><div class="mi">⭐ 4.78分 · 142条评价</div></div>
-        <div class="tags"><span class="tag">3卧室整栋</span><span class="tag">142条高评价</span><span class="tag">美国村步行</span><span class="tag">近Sunset Beach</span></div>
-        <div class="reason">📌 美国村核心位置，142条评价4.78分超稳定，出门就是餐厅酒吧，适合喜欢逛吃热闹的风格。</div>
-        <div class="links"><a class="lnk" href="https://www.airbnb.cn/topstay/all/city/okinawa" target="_blank">Airbnb搜索 ↗</a></div>
       </div>
     </div>
 
@@ -206,158 +366,128 @@ body{font-family:-apple-system,'PingFang SC','Hiragino Sans GB',sans-serif;backg
         <div class="card-hd"><div><div class="card-name">Vessel Hotel Campana Okinawa</div><div class="card-loc">北谷町 · Sunset Beach步行2分钟</div></div><span class="badge b-teal">北谷首推</span></div>
         <div class="stars">★★★★</div><div class="rating-line">TripAdvisor 4.4 · 1400+评价 · 好评率98%</div>
         <div class="meta"><div class="mi">💴 <strong>约¥900–1600</strong>/晚/两人间</div><div class="mi">🚕 机场约25分钟</div></div>
-        <div class="tags"><span class="tag">公共浴场</span><span class="tag">室外泳池</span><span class="tag">早餐口碑极好</span><span class="tag">自行车出租</span><span class="tag">机场巴士直达</span></div>
-        <div class="reason">📌 美国村核心，Sunset Beach步行2分钟，周边餐厅密集无需打车。有自行车出租，骑行从这里直接开始。1400+评价好评率接近100%。</div>
+        <div class="tags"><span class="tag">公共浴场</span><span class="tag">室外泳池</span><span class="tag">早餐口碑好</span><span class="tag">自行车出租</span><span class="tag">机场巴士直达</span></div>
+        <div class="reason">📌 美国村核心，Sunset Beach步行2分钟，周边餐厅密集，骑行从这里出发。</div>
         <div class="links"><a class="lnk" href="https://www.booking.com/hotel/jp/vessel-campana-okinawa.html" target="_blank">Booking.com ↗</a><a class="lnk" href="https://www.tripadvisor.com/Hotel_Review-g1025634-d2528881-Reviews-Vessel_Hotel_Campana_Okinawa-Chatan_cho_Nakagami_gun_Okinawa_Prefecture_Kyushu.html" target="_blank">TripAdvisor ↗</a></div>
       </div>
       <div class="card">
-        <div class="card-hd"><div><div class="card-name">DoubleTree by Hilton Okinawa Chatan</div><div class="card-loc">北谷町 · 美国村 · 屋顶酒吧</div></div><span class="badge b-amber">屋顶酒吧+周六烟花</span></div>
+        <div class="card-hd"><div><div class="card-name">DoubleTree by Hilton Okinawa Chatan</div><div class="card-loc">北谷町 · 屋顶酒吧 · 周六烟花</div></div><span class="badge b-amber">梦琦必住 · 周六烟花</span></div>
         <div class="stars">★★★★★</div>
-        <div class="meta"><div class="mi">💴 <strong>约¥1200–2000</strong>/晚</div><div class="mi">🍹 屋顶日落酒吧</div></div>
-        <div class="tags"><span class="tag">屋顶开放酒吧</span><span class="tag">室内外泳池</span><span class="tag">每周六烟花</span><span class="tag">海景餐厅</span></div>
-        <div class="reason">📌 特别亮点：3楼屋顶酒吧俯瞰整片北谷海岸，点调酒看日落，<strong>每周六晚有烟花</strong>，6/20是周六，完美！</div>
+        <div class="meta"><div class="mi">💴 <strong>约¥1200–2000</strong>/晚</div><div class="mi">🎆 每周六施放烟花</div></div>
+        <div class="tags"><span class="tag">屋顶开放酒吧</span><span class="tag">室内外泳池</span><span class="tag">每周六烟花</span></div>
+        <div class="reason">📌 <strong>6/20是周六！</strong>屋顶酒吧看烟花，是梦琦婚后第一场烟花，点满调酒举杯，蜜月感拉满。强烈推荐前半程选这里。</div>
+        <div class="who-likes"><span class="wl-chip wl-enfj">梦琦 超级感动</span><span class="wl-chip wl-all">全员满分体验</span></div>
         <div class="links"><a class="lnk" href="https://m.ctrip.com/html5/hotel/hoteldetail/16034317.html" target="_blank">携程 ↗</a></div>
       </div>
-      <div class="card">
-        <div class="card-hd"><div><div class="card-name">Lequ Okinawa Chatan Spa & Resort</div><div class="card-loc">北谷町 · 新开 · 温泉SPA型</div></div><span class="badge b-purple">SPA控</span></div>
-        <div class="meta"><div class="mi">💴 <strong>约¥1400–2200</strong>/晚</div><div class="mi">♨️ 温泉水疗</div></div>
-        <div class="tags"><span class="tag">温泉</span><span class="tag">SPA中心</span><span class="tag">海景房</span><span class="tag">步行美国村</span></div>
-        <div class="reason">📌 新开业，硬件最新，梅雨天出去玩不爽时泡个汤立刻好心情。</div>
-        <div class="links"><a class="lnk" href="https://www.booking.com/hotel/jp/lequ-okinawa-chatan-spa-resort.html" target="_blank">Booking.com ↗</a></div>
-      </div>
 
-      <p class="sec-divider" style="margin-top:1.5rem">🌴 后半程（6/21–23）恩纳村 · 海岛惬意型</p>
+      <p class="sec-divider" style="margin-top:1.5rem">🌴 后半程（6/21–23）恩纳村 · 惬意型</p>
       <div class="card top-pick">
         <div class="card-hd"><div><div class="card-name">凯悦濑良垣岛 Hyatt Regency Seragaki Island</div><div class="card-loc">恩纳村 · 私人小岛度假村</div></div><span class="badge b-teal">后半程首推</span></div>
         <div class="stars">★★★★★</div>
         <div class="meta"><div class="mi">💴 <strong>约¥2000–3000</strong>/晚/间</div><div class="mi">🏝 私人岛屿</div></div>
-        <div class="tags"><span class="tag">私人岛屿</span><span class="tag">无边际泳池</span><span class="tag">夜间泳池</span><span class="tag">6家餐厅</span><span class="tag">全包饮品Pass</span></div>
-        <div class="reason">📌 6/21住进来，夜间泳池开放第3天，泡夜池喝调酒看星星，是这趟旅行的高光时刻。</div>
+        <div class="tags"><span class="tag">私人岛屿</span><span class="tag">无边际泳池</span><span class="tag">夜间泳池</span><span class="tag">6家餐厅</span><span class="tag">全包饮品</span></div>
+        <div class="reason">📌 6/21住进来，夜间泳池正式开放3天，泡池喝调酒看星星，是梦琦蜜月游最完美的收尾。</div>
         <div class="links"><a class="lnk" href="https://www.hyatt.com/hyatt-regency/en-US/okaro-hyatt-regency-seragaki-island-okinawa" target="_blank">凯悦官网 ↗</a></div>
       </div>
       <div class="card">
-        <div class="card-hd"><div><div class="card-name">Renaissance Okinawa Resort 万丽</div><div class="card-loc">恩纳村 · 万豪 · 性价比五星</div></div><span class="badge b-amber">性价比之选</span></div>
+        <div class="card-hd"><div><div class="card-name">Renaissance Okinawa Resort 万丽</div><div class="card-loc">恩纳村 · 万豪 · 性价比五星</div></div><span class="badge b-green">性价比</span></div>
         <div class="stars">★★★★★</div>
         <div class="meta"><div class="mi">💴 <strong>约¥1500–2200</strong>/晚/间</div></div>
         <div class="tags"><span class="tag">私人海滩</span><span class="tag">水上活动直约</span><span class="tag">万豪积分</span></div>
-        <div class="reason">📌 万豪积分可抵扣，一站式搞定浮潜SUP皮划艇预约，不用出门折腾。</div>
         <div class="links"><a class="lnk" href="https://www.marriott.com/en-us/hotels/okarw-renaissance-okinawa-resort/overview/" target="_blank">万豪官网 ↗</a></div>
       </div>
     </div>
   </div>
 
-  <!-- ITINERARY -->
-  <div id="itinerary" class="panel">
-    <div class="day-card">
-      <div class="day-hd"><div><div class="day-title">Day 1 · 6月19日（周五）· 落地 + 日落仪式感</div><div class="day-sub">NH477 东京羽田→那霸 15:25–18:00</div></div><span class="badge b-amber" style="font-size:10px">可能阵雨</span></div>
-      <div class="tl-row"><div class="tl-time">18:00</div><div class="tl-body"><div class="tl-title">✈️ 抵达那霸 · 国内线航站楼</div><div class="tl-detail">领行李，叫出租车/DiDi 或乘利木津巴士 → 北谷约25分钟，恩纳村约60–70分钟</div></div></div>
-      <div class="tl-row tl-special"><div class="tl-time">19:35</div><div class="tl-body"><div class="tl-title">🌅 夏至前夕 · 全年最晚日落</div><div class="tl-detail">放下行李立刻去海边，看冲绳最长白昼的日落。提前抢好机位，举杯</div></div></div>
-      <div class="tl-row"><div class="tl-time">20:30</div><div class="tl-body"><div class="tl-title">🍜 周边觅食 · 随心吃喝</div><div class="tl-detail">第一晚不安排任何活动，冲绳面/居酒屋/海鲜，感受到岛状态</div></div></div>
-    </div>
-    <div class="day-card">
-      <div class="day-hd"><div><div class="day-title">Day 2 · 6月20日（周六）· 青之洞窟 + 夏至之夜</div><div class="day-sub">今天是夏至 · 梅雨最后阶段</div></div><span class="badge b-amber" style="font-size:10px">梅雨末</span></div>
-      <div class="tl-row"><div class="tl-time">09:00</div><div class="tl-body"><div class="tl-title">🤿 青之洞窟浮潜 / 体验潜水</div><div class="tl-detail">Klook预约含接送的团，从酒店出发约2–3小时，GoPro免费，小雨照常进行</div></div></div>
-      <div class="tl-row"><div class="tl-time">12:30</div><div class="tl-body"><div class="tl-title">🍜 午饭 · 浮潜附近解决或回酒店</div><div class="tl-detail">浮潜很饿，就近吃，或回酒店餐厅</div></div></div>
-      <div class="tl-row"><div class="tl-time">14:30</div><div class="tl-body"><div class="tl-title">🏖 下午 · 泳池/海滩自由时光</div><div class="tl-detail">回酒店，随便泡，补觉，或骑车随便溜达</div></div></div>
-      <div class="tl-row tl-special"><div class="tl-time">19:35</div><div class="tl-body"><div class="tl-title">🌅 夏至日落 · 全年最长的一天</div><div class="tl-detail">今天是夏至，日落时间是全年最晚，提前占好机位，举杯庆祝四人的相聚</div></div></div>
-      <div class="tl-row"><div class="tl-time">夜间</div><div class="tl-body"><div class="tl-title">🌊 凯悦夜间泳池开放（如住凯悦）</div><div class="tl-detail">18:00–21:00，泡在池里喝无限调酒，夏至之夜最美</div></div></div>
-    </div>
-    <div class="day-card">
-      <div class="day-hd"><div><div class="day-title">Day 3 · 6月21日（周日）· 冲浪 + 骑行 + 万座毛日落</div><div class="day-sub">梅雨基本结束 · 大概率转晴</div></div><span class="badge b-teal" style="font-size:10px">转晴</span></div>
-      <div class="tl-row"><div class="tl-time">09:00</div><div class="tl-body"><div class="tl-title">🏄 冲浪初级体验课（提前预约）</div><div class="tl-detail">残波海滩，约2小时，含教练和装备，含接送。零基础没问题</div></div></div>
-      <div class="tl-row"><div class="tl-time">12:00</div><div class="tl-body"><div class="tl-title">🍱 午饭 + 小憩</div><div class="tl-detail">冲浪很耗体力，吃完饭回酒店补觉1小时</div></div></div>
-      <div class="tl-row"><div class="tl-time">14:30</div><div class="tl-body"><div class="tl-title">🚴 沿海骑行 · 随停随走</div><div class="tl-detail">租酒店电动自行车，沿海边路线，路边网红咖啡馆随时停。不累、出片、有风</div></div></div>
-      <div class="tl-row tl-special"><div class="tl-time">17:30</div><div class="tl-body"><div class="tl-title">🌅 万座毛象鼻岩 · 冲绳TOP日落机位</div><div class="tl-detail">打车10分钟，珊瑚礁悬崖+夕阳，冲绳最拍的日落，必去！</div></div></div>
-      <div class="tl-row"><div class="tl-time">晚上</div><div class="tl-body"><div class="tl-title">🍷 酒店海景晚餐</div><div class="tl-detail">今天够累了，就在酒店吃，懒懒地</div></div></div>
-    </div>
-    <div class="day-card">
-      <div class="day-hd"><div><div class="day-title">Day 4 · 6月22日（周一）· SUP + 海滩放空</div><div class="day-sub">大概率晴天 · 最后完整的岛上日</div></div><span class="badge b-teal" style="font-size:10px">☀️晴天</span></div>
-      <div class="tl-row"><div class="tl-time">07:30</div><div class="tl-body"><div class="tl-title">🛶 清晨 SUP · 人少水清</div><div class="tl-detail">清晨海面最平静，透明板站上去脚下珊瑚鱼群清晰可见。酒店预约</div></div></div>
-      <div class="tl-row"><div class="tl-time">09:30</div><div class="tl-body"><div class="tl-title">☕ 海边咖啡馆 · 发呆晒太阳</div><div class="tl-detail">找落地窗对着海的咖啡馆，点冰饮，什么都不想</div></div></div>
-      <div class="tl-row"><div class="tl-time">14:00</div><div class="tl-body"><div class="tl-title">🏖 私人海滩 · 最后的自由时光</div><div class="tl-detail">铺沙滩垫，喝椰子，晒太阳，发朋友圈，聊天，随心所欲</div></div></div>
-      <div class="tl-row tl-special"><div class="tl-time">夜间</div><div class="tl-body"><div class="tl-title">🌊 夜间泳池 + 无限饮品（如住凯悦）</div><div class="tl-detail">最后一晚泡夜池，点满杯热带调酒，为4天画上完美句号</div></div></div>
-    </div>
-    <div class="day-card">
-      <div class="day-hd"><div><div class="day-title">Day 5 · 6月23日（周二）· 离岛日</div><div class="day-sub">NH2528 那霸→大阪 15:00–16:55 · 国内线出发</div></div><span class="badge b-red" style="font-size:10px">离岛</span></div>
-      <div class="tl-row"><div class="tl-time">上午</div><div class="tl-body"><div class="tl-title">🏖 最后的海边时光</div><div class="tl-detail">退房11点，寄存行李，最后泡一会儿泳池或海滩</div></div></div>
-      <div class="tl-row tl-depart"><div class="tl-time">12:00</div><div class="tl-body"><div class="tl-title">🚕 出发那霸机场 · ⚠️ 国内线航站楼</div><div class="tl-detail">恩纳村出发约60–70分钟，建议12:00前离开。NH2528实际承运6J（星悦航空）</div></div></div>
-      <div class="tl-row"><div class="tl-time">13:00</div><div class="tl-body"><div class="tl-title">🛍 机场扫货</div><div class="tl-detail">泡盛酒 · 黑糖 · 紫薯饼干 · 海盐巧克力 · 风狮爷 · ORION啤酒手信</div></div></div>
-      <div class="tl-row tl-depart"><div class="tl-time">15:00</div><div class="tl-body"><div class="tl-title">✈️ 那霸→大阪 NH2528</div><div class="tl-detail">16:55抵达关西 · 次日6/24 NH979 09:30大阪飞北京，提前订关西机场附近酒店</div></div></div>
-    </div>
-  </div>
-
   <!-- VOTE -->
   <div id="vote" class="panel">
-    <p style="font-size:13px;color:#555;margin-bottom:1rem;line-height:1.6">👍 点你感兴趣的活动，看看大家的热度！</p>
+    <p style="font-size:13px;color:#555;margin-bottom:1rem;line-height:1.6">👍 点你感兴趣的！大家一起选</p>
+
     <p class="sec-divider">🌊 海上活动</p>
     <div class="vote-card">
       <div class="vote-body">
         <div class="card-hd"><div><div class="card-name">🤿 青之洞窟浮潜 / 体验潜水</div><div class="card-loc">恩纳村 · 约2–3小时 · Day 2上午</div></div><span class="badge b-teal">No.1必做</span></div>
         <div class="meta"><div class="mi">💴 <strong>¥300–500</strong>/人</div><div class="mi">🌧 小雨照常</div><div class="mi">🚕 含接送</div></div>
-        <p style="font-size:12px;color:#666;line-height:1.6">洞内阳光折射，整片海泛梦幻蓝光。GoPro免费。预约含接送版，酒店门口出发。<br><a href="https://www.klook.com/en-US/experiences/list/okinawa-snorkeling/c6484-cate123/" style="color:#0e6b7a;font-size:12px" target="_blank">Klook预约 ↗</a></p>
+        <p style="font-size:12px;color:#666;line-height:1.6">洞内梦幻蓝光，GoPro免费。预约含接送版。骊骊大概率会和教练帅哥对眼。<br><a href="https://www.klook.com/en-US/experiences/list/okinawa-snorkeling/c6484-cate123/" style="color:#0e6b7a;font-size:12px" target="_blank">Klook预约 ↗</a></p>
+        <div class="who-likes"><span class="wl-chip wl-all">全员</span><span class="wl-chip wl-isfj">粘粘 会喂最多鱼</span><span class="wl-chip wl-enfp">骊骊 抓住帅哥拍照</span></div>
       </div>
       <div class="bar-wrap"><div class="bar-fill" id="f0" style="width:0%"></div></div>
       <div class="vote-foot"><span class="vcount" id="c0">0 人感兴趣</span><button class="vbtn" id="b0" onclick="vote(0)">👍</button></div>
     </div>
+
     <div class="vote-card">
       <div class="vote-body">
-        <div class="card-hd"><div><div class="card-name">🏄 初级冲浪课</div><div class="card-loc">残波海滩 · 约2小时 · Day 3上午</div></div><span class="badge b-blue">Wishlist</span></div>
-        <div class="meta"><div class="mi">💴 <strong>¥400–700</strong>/人</div><div class="mi">🚕 含接送</div></div>
-        <p style="font-size:12px;color:#666;line-height:1.6">残波是冲绳最适合初学者的冲浪点，教练带4人一起玩，站上浪的成就感爆棚！</p>
+        <div class="card-hd"><div><div class="card-name">🏄 冲浪（中级浪）</div><div class="card-loc">残波海滩 · 约2小时 · Day 3上午 · 看浪况</div></div><span class="badge b-blue">浪况OK才去</span></div>
+        <div class="meta"><div class="mi">💴 <strong>¥400–700</strong>/人</div><div class="mi">🌊 目标0.8–1.5m</div><div class="mi">🚕 含接送</div></div>
+        <p style="font-size:12px;color:#666;line-height:1.6">粘粘畅畅梦琦有基础，能抓1m浪。当天早晨确认浪况，太平或太大直接改方案B。</p>
+        <div class="who-likes"><span class="wl-chip wl-enfj">梦琦</span><span class="wl-chip wl-isfj">粘粘</span><span class="wl-chip wl-enfp">畅畅</span><span class="wl-chip" style="background:#fef9c3;color:#92400e">骊骊 待定</span></div>
       </div>
       <div class="bar-wrap"><div class="bar-fill" id="f1" style="width:0%"></div></div>
       <div class="vote-foot"><span class="vcount" id="c1">0 人感兴趣</span><button class="vbtn" id="b1" onclick="vote(1)">👍</button></div>
     </div>
+
     <div class="vote-card">
       <div class="vote-body">
-        <div class="card-hd"><div><div class="card-name">🛶 Clear SUP 透明立桨</div><div class="card-loc">恩纳村 · 清晨 · Day 4</div></div><span class="badge b-purple">网红打卡</span></div>
-        <div class="meta"><div class="mi">💴 <strong>¥200–400</strong>/人</div><div class="mi">🌅 清晨最美</div></div>
-        <p style="font-size:12px;color:#666;line-height:1.6">站在透明板上，脚下珊瑚鱼群清晰可见，像悬浮海面。清晨水面如镜，出片极美。酒店预约。</p>
+        <div class="card-hd"><div><div class="card-name">🚣 骊骊专属 · 玻璃底独木舟 / 帆船</div><div class="card-loc">北谷 or 恩纳村 · Day 3同时段</div></div><span class="badge b-pink">骊骊专属</span></div>
+        <div class="meta"><div class="mi">💴 <strong>¥300–500</strong>/人</div><div class="mi">💧 完全不沾水</div></div>
+        <p style="font-size:12px;color:#666;line-height:1.6">生理期或不想冲浪的选项。坐着就能看珊瑚，教练大概率是黑皮外国帅哥 😏 完全不影响体验。</p>
+        <div class="who-likes"><span class="wl-chip wl-enfp">骊骊 独享帅哥资源</span></div>
       </div>
       <div class="bar-wrap"><div class="bar-fill" id="f2" style="width:0%"></div></div>
       <div class="vote-foot"><span class="vcount" id="c2">0 人感兴趣</span><button class="vbtn" id="b2" onclick="vote(2)">👍</button></div>
     </div>
+
     <div class="vote-card">
       <div class="vote-body">
-        <div class="card-hd"><div><div class="card-name">🚀 水上摩托 / 拖伞 / 香蕉船</div><div class="card-loc">恩纳村 or 北谷</div></div><span class="badge b-red">刺激派</span></div>
-        <div class="meta"><div class="mi">💴 <strong>¥300–600</strong>/人</div></div>
-        <p style="font-size:12px;color:#666;line-height:1.6">拖伞飞上去俯瞰冲绳海岸线，香蕉船4人一起笑成傻瓜。大酒店直接预约。</p>
+        <div class="card-hd"><div><div class="card-name">🛶 Clear SUP 透明立桨</div><div class="card-loc">恩纳村 · 清晨 · Day 4</div></div><span class="badge b-purple">出片神器</span></div>
+        <div class="meta"><div class="mi">💴 <strong>¥200–400</strong>/人</div><div class="mi">🌅 清晨最美</div></div>
+        <p style="font-size:12px;color:#666;line-height:1.6">透明板脚下可见珊瑚鱼群，清晨海面如镜，出片仙气十足。酒店内预约。</p>
+        <div class="who-likes"><span class="wl-chip wl-isfj">粘粘 最爱这种安静</span><span class="wl-chip wl-enfj">梦琦 拍蜜月感照片</span><span class="wl-chip wl-enfp">骊骊畅畅 闹着玩</span></div>
       </div>
       <div class="bar-wrap"><div class="bar-fill" id="f3" style="width:0%"></div></div>
       <div class="vote-foot"><span class="vcount" id="c3">0 人感兴趣</span><button class="vbtn" id="b3" onclick="vote(3)">👍</button></div>
     </div>
-    <p class="sec-divider">🚴 悠闲活动</p>
+
     <div class="vote-card">
       <div class="vote-body">
-        <div class="card-hd"><div><div class="card-name">🚴 沿海骑行（北谷 or 恩纳村）</div><div class="card-loc">随停随走 · 不需要上公路</div></div><span class="badge b-blue">Wishlist</span></div>
-        <div class="meta"><div class="mi">💴 <strong>¥50–150</strong>/天/车</div></div>
-        <p style="font-size:12px;color:#666;line-height:1.6">北谷沿阿拉哈海滩骑，恩纳村沿58号公路骑，网红咖啡馆随时停。不累、出片、有海风。</p>
+        <div class="card-hd"><div><div class="card-name">🚀 水上摩托 / 拖伞 / 香蕉船</div><div class="card-loc">恩纳村 or 北谷</div></div><span class="badge b-red">刺激派</span></div>
+        <div class="meta"><div class="mi">💴 <strong>¥300–600</strong>/人</div></div>
+        <p style="font-size:12px;color:#666;line-height:1.6">拖伞飞上去俯瞰冲绳，香蕉船4人一起笑成傻瓜，最适合拍疯了的合照。</p>
+        <div class="who-likes"><span class="wl-chip wl-enfp">骊骊畅畅 最想冲</span><span class="wl-chip wl-enfj">梦琦 被拉去</span><span class="wl-chip wl-isfj">粘粘 拒绝但最终去了</span></div>
       </div>
       <div class="bar-wrap"><div class="bar-fill" id="f4" style="width:0%"></div></div>
       <div class="vote-foot"><span class="vcount" id="c4">0 人感兴趣</span><button class="vbtn" id="b4" onclick="vote(4)">👍</button></div>
     </div>
+
+    <p class="sec-divider">🚴 悠闲活动</p>
     <div class="vote-card">
       <div class="vote-body">
-        <div class="card-hd"><div><div class="card-name">🌊 夜间泳池 + 无限饮品</div><div class="card-loc">凯悦濑良垣 · 6/19–10/12开放</div></div><span class="badge b-purple">特别体验</span></div>
-        <div class="meta"><div class="mi">🏨 住凯悦即享</div><div class="mi">🌙 18:00–21:00</div></div>
-        <p style="font-size:12px;color:#666;line-height:1.6">泡在夜间泳池喝调酒看星星，是最懒但最爽的闺蜜活动，也是最难忘的时刻。</p>
+        <div class="card-hd"><div><div class="card-name">🚴 沿海骑行</div><div class="card-loc">北谷 or 恩纳村 · 随停随走</div></div><span class="badge b-blue">Wishlist</span></div>
+        <div class="meta"><div class="mi">💴 <strong>¥50–150</strong>/天/车</div><div class="mi">📍 不需上公路</div></div>
+        <p style="font-size:12px;color:#666;line-height:1.6">沿海边路线骑，网红咖啡馆随时停，不累、出片、有海风。不需要驾照。</p>
+        <div class="who-likes"><span class="wl-chip wl-isfj">粘粘 早查好咖啡馆</span><span class="wl-chip wl-enfp">骊骊畅畅 说走就走</span><span class="wl-chip wl-enfj">梦琦 拍蜜月感骑行照</span></div>
       </div>
       <div class="bar-wrap"><div class="bar-fill" id="f5" style="width:0%"></div></div>
       <div class="vote-foot"><span class="vcount" id="c5">0 人感兴趣</span><button class="vbtn" id="b5" onclick="vote(5)">👍</button></div>
     </div>
-    <p class="sec-divider">🍜 吃喝</p>
+
     <div class="vote-card">
       <div class="vote-body">
-        <div class="card-hd"><div><div class="card-name">🍜 冲绳美食全打卡</div><div class="card-loc">全程随时</div></div></div>
-        <p style="font-size:12px;color:#666;line-height:1.6">必吃：冲绳面·塔可饭·炸猪排·A&amp;W汉堡（冲绳特有）·海鲜刺身·黑糖刨冰·泡盛调酒。用Tabelog查附近评分。</p>
+        <div class="card-hd"><div><div class="card-name">🌊 夜间泳池 + 无限调酒</div><div class="card-loc">凯悦濑良垣 · 6/19–10/12</div></div><span class="badge b-purple">蜜月专属</span></div>
+        <div class="meta"><div class="mi">🏨 住凯悦即享</div><div class="mi">🌙 18:00–21:00</div></div>
+        <p style="font-size:12px;color:#666;line-height:1.6">最后一晚泡夜池，梦琦发蜜月感言，骊骊和畅畅负责干杯，粘粘拍照记录所有人。</p>
+        <div class="who-likes"><span class="wl-chip wl-enfj">梦琦 仪式感MAX</span><span class="wl-chip wl-isfj">粘粘 记录所有人</span><span class="wl-chip wl-enfp">骊骊畅畅 喝最多</span></div>
       </div>
       <div class="bar-wrap"><div class="bar-fill" id="f6" style="width:0%"></div></div>
       <div class="vote-foot"><span class="vcount" id="c6">0 人感兴趣</span><button class="vbtn" id="b6" onclick="vote(6)">👍</button></div>
     </div>
+
+    <p class="sec-divider">🍜 吃喝</p>
     <div class="vote-card">
       <div class="vote-body">
-        <div class="card-hd"><div><div class="card-name">🍺 美国村夜间居酒屋</div><div class="card-loc">北谷 · 第1–2晚</div></div></div>
-        <p style="font-size:12px;color:#666;line-height:1.6">美国村夜晚热闹，居酒屋酒吧密集，点一桌冲绳啤酒+烤物，吹着海风聊天，最放松的闺蜜模式。</p>
+        <div class="card-hd"><div><div class="card-name">🍜 冲绳美食全打卡</div><div class="card-loc">全程随时</div></div></div>
+        <p style="font-size:12px;color:#666;line-height:1.6">必吃：冲绳面·塔可饭·炸猪排·A&amp;W汉堡·海鲜刺身·黑糖刨冰·泡盛调酒。用Tabelog查评分。</p>
+        <div class="who-likes"><span class="wl-chip wl-enfp">骊骊畅畅 美食雷达</span><span class="wl-chip wl-isfj">粘粘 提前做功课</span><span class="wl-chip wl-enfj">梦琦 拍好看的食物照</span></div>
       </div>
       <div class="bar-wrap"><div class="bar-fill" id="f7" style="width:0%"></div></div>
       <div class="vote-foot"><span class="vcount" id="c7">0 人感兴趣</span><button class="vbtn" id="b7" onclick="vote(7)">👍</button></div>
@@ -376,29 +506,35 @@ body{font-family:-apple-system,'PingFang SC','Hiragino Sans GB',sans-serif;backg
       </div>
     </div>
     <div class="tbox">
-      <div class="tbox-hd">🛫 6/23 离开 · NH2528 15:00–16:55（国内线出发）</div>
+      <div class="tbox-hd">🛫 6/23 离开 · NH2528 15:00–16:55（国内线）</div>
       <div class="tbox-body">
-        <div class="t-row"><div class="t-icon">⚠️</div><div class="t-text"><div class="t-title">从国内线航站楼出发</div><div class="t-detail">NH2528 实际承运 6J（星悦航空），国内线出发。建议 12:30 前从恩纳村动身。</div></div></div>
-        <div class="t-row"><div class="t-icon">🗓️</div><div class="t-text"><div class="t-title">次日6/24大阪→北京 NH979 09:30</div><div class="t-detail">提前订好关西机场附近酒店，关西机场到酒店打车约15分钟。</div></div></div>
+        <div class="t-row"><div class="t-icon">⚠️</div><div class="t-text"><div class="t-title">国内线航站楼出发</div><div class="t-detail">NH2528 实际承运 6J（星悦航空）。建议12:30前从恩纳村出发。</div></div></div>
+        <div class="t-row"><div class="t-icon">🗓️</div><div class="t-text"><div class="t-title">次日6/24 NH979 09:30大阪→北京</div><div class="t-detail">提前订关西机场附近酒店，到了大阪可以吃一顿好的犒劳自己。</div></div></div>
       </div>
     </div>
-    <p class="sec-divider">🚕 无驾照出行指南</p>
-    <div class="tip"><div class="tip-title">打车 · DiDi + 出租车</div><div class="tip-body">冲绳推荐 <strong>DiDi Japan</strong> App，比 Uber 覆盖率更好。路边也很容易拦到出租车。4人分摊车费很划算，大型度假村前台都可帮叫车。</div></div>
-    <div class="tip"><div class="tip-title">含接送的活动预约（最省事）</div><div class="tip-body">Klook / KKday 大部分热门活动（青之洞窟、冲浪课）都有含接送版本，从酒店门口出发，结束后送回，全程不需要想交通。优先选这类套餐。</div></div>
-    <div class="tip"><div class="tip-title">自行车 · 不需要驾照</div><div class="tip-body">Vessel 酒店有自行车出租，恩纳村附近有电动单车租赁。骑行路线贴着海边走，不上公路，安全悠闲，是无车游客最好的代步方式。</div></div>
-    <p class="sec-divider">💡 其他实用贴士</p>
-    <div class="tip"><div class="tip-title">🌧 梅雨期应对</div><div class="tip-body">浮潜/潜水小雨照常，冲浪大风大浪可能取消（提前确认）。雨备方案：DMM喀里优志水族馆（那霸）·酒店SPA温泉·室内泳池。</div></div>
-    <div class="tip"><div class="tip-title">🌞 防晒必备</div><div class="tip-body">6月冲绳紫外线极强，SPF 50+ 是最低标准。强烈建议买防晒浮潜服（浮潜和冲浪时穿），骑行时带薄防晒长袖。</div></div>
-    <div class="tip"><div class="tip-title">📱 必备 App</div><div class="tip-body">Google Maps · Klook/KKday（活动预约）· Tabelog（餐厅评价）· DiDi Japan（打车）· 携程（中文查价）· Weather News（最准天气）</div></div>
-    <div class="tip"><div class="tip-title">💴 人均预算参考（不含机票）</div><div class="tip-body">住宿：¥1500–3000/晚/人（看选哪家）<br>活动：青之洞窟¥400·冲浪¥500·SUP¥300<br>餐饮：¥300–500/人/天<br>交通：打车4人均摊约¥300/天<br><strong>全程人均活动+餐饮+交通约 ¥4000–7000（4天）</strong></div></div>
-    <div class="tip"><div class="tip-title">🗓️ 提前预约清单</div><div class="tip-body">① 酒店 — 出发前1–2个月！旺季极抢手<br>② 青之洞窟浮潜（含接送版）— 提前2周<br>③ 冲浪课 — 提前1周<br>④ 大阪机场附近酒店（6/23晚）— 现在就订</div></div>
+    <p class="sec-divider">🏄 冲浪方案说明</p>
+    <div class="tip"><div class="tip-title">浪况好（0.8–1.5m）→ 正常冲浪</div><div class="tip-body">粘粘、畅畅、梦琦上，骊骊根据状态决定。预约残波海滩冲浪课，约2小时含教练含接送。</div></div>
+    <div class="tip"><div class="tip-title">浪况不好 → 改方案B</div><div class="tip-body">全部改去青之洞窟浮潜（浪况不好浮潜反而更平稳），或者改 SUP/皮划艇，一点不亏。梅雨结束后冲绳浪通常比较稳定，不用太担心。</div></div>
+    <div class="tip"><div class="tip-title">🚣 骊骊的专属备案</div><div class="tip-body">来生理期或不想冲浪 → 预约<strong>玻璃底独木舟</strong>（完全坐着，不沾水，能看珊瑚和鱼）或<strong>帆船日游</strong>（出海，风景好，教练大概率是外国帅哥）。在 Klook / KKday 搜"glass bottom kayak okinawa"或"sailing okinawa"。</div></div>
+    <p class="sec-divider">🚕 无驾照出行</p>
+    <div class="tip"><div class="tip-title">打车 DiDi + 出租车</div><div class="tip-body">冲绳推荐 DiDi Japan App，4人分摊很划算。大酒店前台都可帮叫车。</div></div>
+    <div class="tip"><div class="tip-title">含接送的活动（最省事）</div><div class="tip-body">Klook/KKday 上大部分热门活动都有含接送版，从酒店门口出发，活动结束送回，不用想交通。优先选这类。</div></div>
+    <div class="tip"><div class="tip-title">骑行不需要驾照</div><div class="tip-body">Vessel 酒店有自行车出租，恩纳村附近有电动单车。沿海边骑不上公路，安全悠闲。</div></div>
+    <p class="sec-divider">💡 其他贴士</p>
+    <div class="tip"><div class="tip-title">🌧 梅雨备案</div><div class="tip-body">浮潜小雨照常，冲浪大浪可能取消。备案：DMM 喀里优志水族馆 / 酒店SPA温泉 / 室内泳池。粘粘负责梅雨备案研究 😄</div></div>
+    <div class="tip"><div class="tip-title">🌞 防晒</div><div class="tip-body">SPF 50+ 是最低标准。强烈建议买防晒浮潜服，冲浪浮潜时穿，出来照样好看。</div></div>
+    <div class="tip"><div class="tip-title">📱 必备 App</div><div class="tip-body">Google Maps · Klook/KKday · Tabelog（餐厅）· DiDi Japan（打车）· 携程（查价）· Weather News（天气）</div></div>
+    <div class="tip"><div class="tip-title">💴 人均预算参考（不含机票）</div><div class="tip-body">住宿：¥1500–3000/晚/人 · 活动：约¥1500 · 餐饮：¥300–500/天 · 交通打车均摊约¥300/天<br><strong>全程人均约 ¥4000–8000（4天，取决于住宿级别）</strong></div></div>
+    <div class="tip"><div class="tip-title">🗓️ 提前预约清单</div><div class="tip-body">① 酒店 — 出发前1–2个月<br>② 青之洞窟浮潜（含接送版）— 提前2周<br>③ 冲浪课 — 提前1周（当天确认浪况后再决定是否出发）<br>④ 骊骊备用：玻璃底独木舟 / 帆船 — 提前1周<br>⑤ 6/23晚大阪关西机场附近酒店 — 现在就订</div></div>
   </div>
 
   <div style="text-align:center;padding:2.5rem 0 1rem;font-size:12px;color:#bbb">
-    Made with 💙 · 冲绳4天闺蜜行 · Jun 2026<br>
+    Made with 💙 for 梦琦·骊骊·粘粘·畅畅<br>
+    冲绳4天蜜月姐妹游 · Jun 2026<br>
     <span style="font-size:11px">更新于 2026.04</span>
   </div>
 </div>
+
 <script>
 var votes=[0,0,0,0,0,0,0,0],voted=[false,false,false,false,false,false,false,false];
 function vote(i){var b=document.getElementById('b'+i);if(voted[i]){votes[i]--;voted[i]=false;b.classList.remove('on')}else{votes[i]++;voted[i]=true;b.classList.add('on')}var m=Math.max.apply(null,votes)||1;for(var j=0;j<votes.length;j++){document.getElementById('c'+j).textContent=votes[j]+' 人感兴趣';document.getElementById('f'+j).style.width=(votes[j]/m*100)+'%'}}
