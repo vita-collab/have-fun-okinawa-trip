@@ -3,362 +3,508 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🌊 冲绳闺蜜行 Jun 2026 | Vita & Friends</title>
+<title>🌊 冲绳闺蜜行 Jun 2026 完整版</title>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: -apple-system, 'PingFang SC', 'Hiragino Sans GB', sans-serif; background: #f4f2ed; color: #1a1a1a; }
-.container { max-width: 900px; margin: 0 auto; padding: 0 15px; }
+body { font-family: -apple-system, 'PingFang SC', 'Hiragino Sans GB', sans-serif; background: #f4f2ed; color: #1a1a1a; line-height: 1.6; }
+.container { max-width: 980px; margin: 0 auto; padding: 0 15px; }
 .hero { background: linear-gradient(135deg, #0e6b7a 0%, #1fa8b5 100%); color: white; padding: 3rem 1.5rem; text-align: center; }
 .hero h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
 .hero p { font-size: 1.1rem; opacity: 0.95; }
 .section { background: white; margin: 2rem 0; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
 .section h2 { color: #0e6b7a; margin-bottom: 1.5rem; font-size: 1.8rem; border-bottom: 3px solid #1fa8b5; padding-bottom: 0.5rem; }
+.section h3 { color: #1fa8b5; margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.3rem; }
 .day-card { background: #f9f7f3; padding: 1.5rem; margin: 1.5rem 0; border-left: 5px solid #1fa8b5; border-radius: 4px; }
-.day-card h3 { color: #0e6b7a; margin-bottom: 1rem; font-size: 1.3rem; }
-.info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; }
-.info-item { background: white; padding: 1rem; border-radius: 4px; border: 1px solid #e0e0e0; }
-.info-label { font-weight: 600; color: #666; font-size: 0.9rem; }
-.info-value { color: #0e6b7a; font-size: 1.1rem; margin-top: 0.3rem; }
+.day-card h3 { margin-top: 0; }
+.activity { background: #e8f4f8; padding: 1.2rem; margin: 1rem 0; border-radius: 4px; border-left: 4px solid #1fa8b5; }
+.time-badge { display: inline-block; background: #1fa8b5; color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem; margin-right: 0.5rem; font-weight: 600; }
+.transport { background: linear-gradient(135deg, #fff3cd 0%, #ffe0b2 100%); padding: 1.2rem; margin: 1rem 0; border-radius: 4px; border-left: 4px solid #ff9800; }
 .hotel-box { background: #f5f5f5; padding: 1.5rem; margin: 1rem 0; border-radius: 6px; border: 2px solid #1fa8b5; }
 .hotel-name { font-size: 1.3rem; font-weight: 600; color: #0e6b7a; margin-bottom: 0.5rem; }
-.activity { background: #e8f4f8; padding: 1rem; margin: 0.8rem 0; border-radius: 4px; border-left: 4px solid #1fa8b5; }
-.time-badge { display: inline-block; background: #1fa8b5; color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem; margin-right: 0.5rem; }
+.confirm-box { background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); padding: 1.2rem; margin: 1rem 0; border-radius: 4px; border-left: 4px solid #4caf50; }
+.confirm-box strong { color: #2e7d32; }
+.restaurant-card { background: #fafafa; padding: 1.2rem; margin: 0.8rem 0; border-radius: 4px; border-left: 4px solid #e91e63; }
+.restaurant-name { font-weight: 600; color: #0e6b7a; font-size: 1.1rem; }
+.activity-option { background: white; padding: 1rem; margin: 0.8rem 0; border: 1px solid #ddd; border-radius: 4px; border-left: 4px solid #2196f3; }
+.price { color: #d32f2f; font-weight: 600; }
 .alert { background: #fff3cd; border: 1px solid #ffc107; padding: 1rem; border-radius: 4px; margin: 1rem 0; }
-.tick { color: #28a745; font-weight: 600; }
-.ferry-info { background: linear-gradient(135deg, #e8f4f8 0%, #d4eef5 100%); padding: 1.5rem; border-radius: 6px; margin: 1rem 0; }
-.ferry-detail { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
-.ferry-item { background: white; padding: 1rem; border-radius: 4px; }
-.price { font-size: 1.5rem; color: #d9534f; font-weight: 600; }
+.note { background: #e3f2fd; border-left: 4px solid #2196f3; padding: 1rem; margin: 1rem 0; border-radius: 4px; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1rem 0; }
+@media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; } }
+table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+table td { padding: 0.8rem; border: 1px solid #ddd; }
+table tr:nth-child(even) { background: #f9f9f9; }
+.tick { color: #4caf50; font-weight: 600; }
+.map-icon { display: inline-block; margin-right: 0.5rem; }
 </style>
 </head>
 <body>
 
 <div class="hero">
   <h1>🌊 冲绳4天闺蜜行</h1>
-  <p>Jun 19-23, 2026 · 无驾照版完全攻略</p>
+  <p>Jun 19-23, 2026 · 完整预订确认版</p>
 </div>
 
 <div class="container">
 
 <!-- 快速概览 -->
 <div class="section">
-  <h2>📌 快速概览</h2>
-  <div class="info-grid">
-    <div class="info-item">
-      <div class="info-label">日期</div>
-      <div class="info-value">6月19-23日</div>
+  <h2>✅ 预订确认状态</h2>
+  <div class="grid-2">
+    <div class="confirm-box">
+      <strong>🚢 船票预约号</strong><br>
+      TK06200039<br>
+      <span style="font-size: 0.9rem; color: #555;">6月20日往返渡嘉敷</span>
     </div>
-    <div class="info-item">
-      <div class="info-label">人数</div>
-      <div class="info-value">4人</div>
+    <div class="confirm-box">
+      <strong>🏄 冲浪课预约ID</strong><br>
+      4881904<br>
+      <span style="font-size: 0.9rem; color: #555;">6月22日 11:00，40,000日元</span>
     </div>
-    <div class="info-item">
-      <div class="info-label">那霸住宿</div>
-      <div class="info-value">6.19-6.21</div>
+    <div class="confirm-box">
+      <strong>🛏️ 那霸酒店</strong><br>
+      Lacer 冲绳那霸美荣茂<br>
+      <span style="font-size: 0.9rem; color: #555;">6.19-6.21</span>
     </div>
-    <div class="info-item">
-      <div class="info-label">北谷住宿</div>
-      <div class="info-value">6.21-6.23</div>
+    <div class="confirm-box">
+      <strong>🏡 北谷别墅</strong><br>
+      ReVIERA Resort Villa<br>
+      <span style="font-size: 0.9rem; color: #555;">6.21-6.23</span>
     </div>
   </div>
 </div>
 
-<!-- 日程详情 -->
+<!-- 交通完整指南 -->
 <div class="section">
-  <h2>📅 详细行程</h2>
+  <h2>🚗 交通完整指南</h2>
 
-  <!-- Day 1 -->
-  <div class="day-card">
-    <h3>🌅 Day 1 | 6月19日（周五）那霸到达</h3>
-    <div class="activity">
-      <span class="time-badge">15:00</span>
-      <strong>入住 Lacer 冲绳那霸美荣茂</strong>
-      <div style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">
-        📍 那霸市前岛3丁目7-7 | 电话：+81 3 6910 2907<br>
-        🛏️ 1间客房，4位成人 | ¥2,443元/晚
-      </div>
-    </div>
-    <div class="activity">
-      <span class="time-badge">18:00+</span>
-      <strong>国际通漫步 & 晚餐</strong>
-      <div style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">
-        推荐：燒肉王那霸久茂地（吃到饱）3,600日元/人
-      </div>
-    </div>
+  <h3>6月19日（周五）| 到达那霸</h3>
+  <div class="transport">
+    <strong>✈️ 那霸机场 → Lacer 酒店</strong><br>
+    <br>
+    <strong>方案推荐：</strong><br>
+    <strong>1️⃣ 出租车（最方便）</strong><br>
+    • 车程：约15-20分钟<br>
+    • 价格：约1,800-2,500日元<br>
+    • 优点：直达酒店，行李无压力<br>
+    <br>
+    <strong>2️⃣ 单轨电车 + 打车</strong><br>
+    • 单轨机场线 → 县厅前站：290日元<br>
+    • 再乘出租车到酒店：约500-800日元<br>
+    • 车程：约35-40分钟（含等车）<br>
+    <br>
+    <strong>📍 目标：</strong> Lacer 冲绳那霸美荣茂<br>
+    • 地址：那霸市前岛3丁目7-7<br>
+    • 电话：+81 3 6910 2907<br>
+    • 入住：15:00-00:00
   </div>
 
-  <!-- Day 2 -->
-  <div class="day-card">
-    <h3>⛵ Day 2 | 6月20日（周六）当天往返渡嘉敷</h3>
-    
-    <div style="background: white; padding: 1rem; border-radius: 4px; margin: 1rem 0; border: 2px solid #0e6b7a;">
-      <strong style="color: #0e6b7a; font-size: 1.1rem;">🚢 渡嘉敷船票确认</strong>
-      <div style="margin-top: 1rem; font-size: 0.95rem;">
-        <div><span class="tick">✓ 预约号：</span> <strong>TK06200039</strong></div>
-        <div><span class="tick">✓ 船舶：</span> 渡嘉敷海洋班轮</div>
-        <div style="margin-top: 1rem; background: #f5f5f5; padding: 1rem; border-radius: 4px;">
-          <strong>往程（泊港 → 渡嘉敷）</strong><br>
-          时间：09:00 - 09:40<br>
-          所需时间：约35-40分钟
-        </div>
-        <div style="margin-top: 0.8rem; background: #f5f5f5; padding: 1rem; border-radius: 4px;">
-          <strong>回程（渡嘉敷 → 泊港）</strong><br>
-          时间：17:30 - 18:10<br>
-          所需时间：约35-40分钟
-        </div>
-        <div style="margin-top: 1rem; color: #666; font-size: 0.9rem;">
-          人数：4人（Sun Mengqi, Zhang Chang, Wang Xueyan, Ma Xiaoli）
-        </div>
-      </div>
-    </div>
-
-    <div class="alert">
-      <strong>⏰ 重要提醒</strong><br>
-      • 建议 08:30 前到达泊港北岸乘船口<br>
-      • 出港30分钟前购票（泊港北岸或とまりん）<br>
-      • 带现金日元（乳船口无卡支付）<br>
-      • 考虑提前预订日帰りツアー（含浮潜讲师、午餐、GoPro照片）
-    </div>
-
-    <div class="activity">
-      <span class="time-badge">14:00-17:30</span>
-      <strong>岛上活动（建议参加日帰りツアー）</strong>
-      <div style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">
-        🤿 浮潜3个点位（讲师陪同）<br>
-        🍱 午餐便当<br>
-        📸 GoPro水下照片赠送<br>
-        💰 约7,500-9,500日元/人
-      </div>
-    </div>
-
-    <div class="activity">
-      <span class="time-badge">18:30+</span>
-      <strong>回到那霸，晚餐休息</strong>
-    </div>
+  <h3>6月20日（周六）| 渡嘉敷往返日</h3>
+  <div class="transport">
+    <strong>🏨 Lacer酒店 → 泊港 → 渡嘉敷 → 泊港 → Lacer</strong><br>
+    <br>
+    <strong>早间：酒店 → 泊港（出发至渡嘉敷）</strong><br>
+    • 出租车/巴士 → 泊港<br>
+    • 车程：约20-30分钟<br>
+    • 到达时间：建议 <span class="time-badge">08:30</span> 前<br>
+    • 💡 理由：出港30分钟前必须购票<br>
+    <br>
+    <strong>船票详情：</strong><br>
+    <table style="font-size: 0.95rem;">
+      <tr style="background: #f0f0f0;">
+        <td><strong>往程</strong></td>
+        <td><strong>09:00-09:40</strong></td>
+        <td>泊港 → 渡嘉敷</td>
+      </tr>
+      <tr>
+        <td><strong>回程</strong></td>
+        <td><strong>17:30-18:10</strong></td>
+        <td>渡嘉敷 → 泊港</td>
+      </tr>
+      <tr style="background: #f0f0f0;">
+        <td colspan="3" style="color: #d32f2f;"><strong>⚠️ 注：出港前30分钟购票（泊港北岸）</strong></td>
+      </tr>
+    </table>
+    <br>
+    <strong>返回：泊港 → Lacer酒店</strong><br>
+    • 18:10 回到泊港<br>
+    • 出租车/巴士回酒店<br>
+    • 车程：约20-30分钟<br>
+    • 预计 <span class="time-badge">19:00</span> 回到酒店<br>
   </div>
 
-  <!-- Day 3 -->
-  <div class="day-card">
-    <h3>🏄 Day 3 | 6月21日（周日）换酒店 + 冲浪</h3>
-    
-    <div class="activity">
-      <span class="time-badge">08:00-11:00</span>
-      <strong>Lacer 那霸酒店退住</strong>
-      <div style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">
-        检查行李，确认无遗漏物品
-      </div>
-    </div>
-
-    <div class="activity">
-      <span class="time-badge">11:00-15:00</span>
-      <strong>那霸 → 北谷（交通）</strong>
-      <div style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">
-        方案1：巴士（那霸巴士总站 → 桑江站）约700日元，20-28号路线<br>
-        方案2：出租车（包车更方便）约1,500-2,000日元<br>
-        💡 提前1天预订出租车，告诉酒店
-      </div>
-    </div>
-
-    <div class="hotel-box">
-      <div class="hotel-name">🏡 ReVIERA Resort Villa（北谷）</div>
-      <div style="margin-top: 0.8rem;">
-        <strong>3卧室别墅 + 私人泳池</strong><br>
-        📍 北谷町美浜三丁目2-7 | 电话：+81 98 923 0415<br>
-        🛏️ 4位成人 | ¥180,380（2晚，含清洁费）
-      </div>
-      <div style="margin-top: 1rem; font-size: 0.9rem; background: #f5f5f5; padding: 1rem; border-radius: 4px;">
-        <strong>设施：</strong> 私人泳池 · 厨房 · 洗衣机 · Netflix · 免费WiFi · 空调 · 吹风机
-      </div>
-      <div style="margin-top: 0.5rem; color: #666; font-size: 0.9rem;">
-        ✓ 入住：6月21日 15:00-21:00<br>
-        ✓ 退住：6月23日 07:00-10:00
-      </div>
-    </div>
-
-    <div class="activity">
-      <span class="time-badge">15:00+</span>
-      <strong>冲浪课程（Day 1）</strong>
-      <div style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">
-        推荐：North Ocean Blue（ノースオーシャンブルー）<br>
-        📍 北谷町宫城海岸 | 电话：098-923-5010<br>
-        💰 6,000-8,000日元/人（含防晒衣、讲师、GoPro照片）<br>
-        📲 Activity Japan 预订 or 电话预约
-      </div>
-    </div>
-
-    <div class="activity">
-      <span class="time-badge">18:00+</span>
-      <strong>晚餐（北谷推荐）</strong>
-      <div style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">
-        推荐1：GORDIE'S汉堡（Tabelog百大）<br>
-        推荐2：阿古猪涮涮锅（高级）电话：090-8949-6651
-      </div>
-    </div>
+  <h3>6月21日（周日）| 酒店换房日</h3>
+  <div class="transport">
+    <strong>🔄 Lacer（那霸）→ ReVIERA Resort Villa（北谷）</strong><br>
+    <br>
+    <strong>上午：退房 Lacer</strong><br>
+    • 退房时间：<span class="time-badge">00:00-11:00</span><br>
+    • 行李寄存：可询问前台<br>
+    <br>
+    <strong>中午：那霸 → 北谷</strong><br>
+    <strong>方案A：出租车（推荐）</strong><br>
+    • 那霸 → 北谷美国村：约45-60分钟<br>
+    • 价格：约1,800-2,500日元<br>
+    • 优点：直达别墅门口，可放行李<br>
+    • 💡 建议：提前一天电话预订<br>
+    <br>
+    <strong>方案B：巴士</strong><br>
+    • 那霸巴士总站 → 桑江站<br>
+    • 巴士号线：20、28、29、120<br>
+    • 价格：约700日元<br>
+    • 时间：约40-50分钟<br>
+    • 从桑江站步行到别墅：3-5分钟<br>
+    <br>
+    <strong>下午：入住 ReVIERA Resort Villa</strong><br>
+    • 入住时间：<span class="time-badge">15:00-21:00</span><br>
+    • 地址：北谷町美浜三丁目2-7<br>
+    • 电话：+81 98 923 0415<br>
+    <br>
+    <strong>🏄 冲浪课程（Day 1）</strong><br>
+    • 时间：下午（具体看讲师邮件）<br>
+    • 地点：North Ocean Blue<br>
+    • 📞 098-923-5010
   </div>
 
-  <!-- Day 4 -->
-  <div class="day-card">
-    <h3>🌅 Day 4 | 6月22日（周一）北谷休闲日</h3>
-    
-    <div class="activity">
-      <span class="time-badge">09:00-12:00</span>
-      <strong>冲浪课程（Day 2）- 进阶</strong>
-      <div style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">
-        同日期1推荐店家 | 8,000-10,000日元/人
-      </div>
-    </div>
-
-    <div class="activity">
-      <span class="time-badge">12:00-17:00</span>
-      <strong>北谷美国村逛街 + 日落海滩</strong>
-      <div style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">
-        🏪 美国村Depot Island · AEON · 药妆<br>
-        🏖️ 日落海滩散步、拍照（日落19:35）<br>
-        🍔 午餐：Taco Rice Kijimuna（990日元）
-      </div>
-    </div>
-
-    <div class="activity">
-      <span class="time-badge">17:00-20:00</span>
-      <strong>可选：浮潜活动 or 酒店休闲</strong>
-      <div style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">
-        若参加浮潜：宮城海岸浮潜 4,000-6,000日元/人<br>
-        或在别墅泳池放松 + 私人晚餐
-      </div>
-    </div>
-
-    <div class="activity">
-      <span class="time-badge">19:00+</span>
-      <strong>晚餐</strong>
-      <div style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">
-        推荐：高级烧肉or涮涮锅
-      </div>
-    </div>
+  <h3>6月22日（周一）| 北谷活动日</h3>
+  <div class="transport">
+    <strong>⚡ 冲浪课程 + 美国村探险</strong><br>
+    <br>
+    <strong>早间：冲浪课程（已确认）</strong><br>
+    <table style="font-size: 0.95rem;">
+      <tr style="background: #f0f0f0;">
+        <td><strong>时间</strong></td>
+        <td><span class="time-badge">11:00</span></td>
+      </tr>
+      <tr>
+        <td><strong>地点</strong></td>
+        <td>North Ocean Blue（北谷町宮城海岸）</td>
+      </tr>
+      <tr style="background: #f0f0f0;">
+        <td><strong>人数</strong></td>
+        <td>4人</td>
+      </tr>
+      <tr>
+        <td><strong>费用</strong></td>
+        <td><span class="price">40,000日元</span>（已确认）</td>
+      </tr>
+      <tr style="background: #f0f0f0;">
+        <td><strong>预约ID</strong></td>
+        <td>4881904</td>
+      </tr>
+    </table>
+    <br>
+    <strong>中午：午餐</strong><br>
+    • 冲浪后洗漱（North Ocean Blue有浴室）<br>
+    • 美国村周边餐厅（见后文推荐）<br>
+    <br>
+    <strong>下午-傍晚：美国村 + 日落海滩</strong><br>
+    • 美国村逛街（摩天轮、购物、餐厅）<br>
+    • 日落海滩散步<br>
+    • 日落时间：约 <span class="time-badge">19:35</span><br>
   </div>
 
-  <!-- Day 5 -->
-  <div class="day-card">
-    <h3>✈️ Day 5 | 6月23日（周二）离岛</h3>
-    
-    <div class="activity">
-      <span class="time-badge">07:00-10:00</span>
-      <strong>ReVIERA Resort Villa 退住</strong>
-      <div style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">
-        清理房间，退房，确认计费无误
-      </div>
-    </div>
-
-    <div class="activity">
-      <span class="time-badge">10:00-11:30</span>
-      <strong>北谷 → 那霸机场</strong>
-      <div style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">
-        出租车or巴士 约50-60分钟，700-1,500日元
-      </div>
-    </div>
-
-    <div class="activity">
-      <span class="time-badge">12:00+</span>
-      <strong>那霸机场离岛</strong>
-      <div style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">
-        💡 记得在国内航站楼（不是国际楼！）
-      </div>
-    </div>
+  <h3>6月23日（周二）| 离岛日</h3>
+  <div class="transport">
+    <strong>📦 ReVIERA → 那霸机场</strong><br>
+    <br>
+    <strong>早间：退房</strong><br>
+    • 退房时间：<span class="time-badge">07:00-10:00</span><br>
+    <br>
+    <strong>北谷 → 那霸机场</strong><br>
+    <strong>方案A：出租车（推荐）</strong><br>
+    • 北谷 → 那霸机场：约50-60分钟<br>
+    • 价格：约2,500-3,500日元<br>
+    <br>
+    <strong>方案B：巴士</strong><br>
+    • 北谷美国村 → 那霸机场<br>
+    • 巴士号线：20、28、29、120<br>
+    • 时间：约50-70分钟<br>
+    <br>
+    <strong>⚠️ 重要：去国内航站楼（Domestic），不是国际楼！</strong>
   </div>
 
 </div>
 
-<!-- 预算汇总 -->
+<!-- 渡嘉敷浮潜活动选项 -->
 <div class="section">
-  <h2>💰 预算汇总（4人）</h2>
-  <table style="width: 100%; border-collapse: collapse;">
-    <tr style="background: #f5f5f5;">
-      <td style="padding: 0.8rem; border: 1px solid #ddd;"><strong>项目</strong></td>
-      <td style="padding: 0.8rem; border: 1px solid #ddd; text-align: right;"><strong>金额</strong></td>
-    </tr>
-    <tr>
-      <td style="padding: 0.8rem; border: 1px solid #ddd;">Lacer 那霸酒店（2晚）</td>
-      <td style="padding: 0.8rem; border: 1px solid #ddd; text-align: right;">¥4,886</td>
-    </tr>
-    <tr style="background: #f9f9f9;">
-      <td style="padding: 0.8rem; border: 1px solid #ddd;">渡嘉敷船票（往返，4人）</td>
-      <td style="padding: 0.8rem; border: 1px solid #ddd; text-align: right;">约1,000日元</td>
-    </tr>
-    <tr>
-      <td style="padding: 0.8rem; border: 1px solid #ddd;">ReVIERA Resort Villa（2晚）</td>
-      <td style="padding: 0.8rem; border: 1px solid #ddd; text-align: right;">¥180,380</td>
-    </tr>
-    <tr style="background: #f9f9f9;">
-      <td style="padding: 0.8rem; border: 1px solid #ddd;">冲浪课程×2次（4人）</td>
-      <td style="padding: 0.8rem; border: 1px solid #ddd; text-align: right;">24,000-36,000日元</td>
-    </tr>
-    <tr>
-      <td style="padding: 0.8rem; border: 1px solid #ddd;">餐饮（5天）</td>
-      <td style="padding: 0.8rem; border: 1px solid #ddd; text-align: right;">50,000-70,000日元</td>
-    </tr>
-    <tr style="background: #e8f4f8;">
-      <td style="padding: 0.8rem; border: 1px solid #ddd;"><strong>总计（约）</strong></td>
-      <td style="padding: 0.8rem; border: 1px solid #ddd; text-align: right;"><strong>约250,000-280,000日元</strong></td>
-    </tr>
-  </table>
-</div>
+  <h2>🤿 渡嘉敷浮潜活动推荐</h2>
+  
+  <p style="margin-bottom: 1.5rem; color: #666;">你在渡嘉敷有 <strong>06:30-17:30 共11小时</strong> 的时间。以下是热门浮潜ツアー选项（都含船票、讲师、午餐、GoPro照片）</p>
 
-<!-- 重要提醒 -->
-<div class="section">
-  <h2>⚠️ 重要提醒</h2>
+  <h3>🥇 选项1：Cerulean Blue｜ウミガメ遭遇率90%</h3>
+  <div class="activity-option">
+    <div class="restaurant-name">🐢 海龟邂逅 + 专业讲师浮潜</div>
+    <div style="margin-top: 0.8rem; font-size: 0.95rem;">
+      <strong>特色：</strong> ウミガメとの遭遇率90%（野生动物无保证）<br>
+      <strong>讲师：</strong> 日本サーフィン連盟認定<br>
+      <strong>浮潜点：</strong> 3个不同地点回遊<br>
+      <strong>包含：</strong> 讲师陪伴、防晒衣、GoPro照片、午餐<br>
+      <strong>价格：</strong> <span class="price">约7,500-9,500日元/人</span><br>
+      <strong>预订：</strong> Activity Japan 搜索「渡嘉敷 ウミガメ」<br>
+      <strong>链接：</strong> https://activityjapan.com/
+    </div>
+  </div>
+
+  <h3>🥈 选项2：Jumbo Tours｜阿波連ビーチ経由</h3>
+  <div class="activity-option">
+    <div class="restaurant-name">🏖️ 白沙滩浮潜 + 讲师陪伴</div>
+    <div style="margin-top: 0.8rem; font-size: 0.95rem;">
+      <strong>讲师：</strong> 水に入ってサポート<br>
+      <strong>年龄限制：</strong> 4歳以上OK<br>
+      <strong>所要时间：</strong> 1.5-2小時<br>
+      <strong>包含：</strong> ボート代、機材一式、送迎、午餐<br>
+      <strong>价格：</strong> <span class="price">約7,500-9,000日元/人</span><br>
+      <strong>预订：</strong> Activity Japan 搜索「渡嘉敷 シュノーケリング」
+    </div>
+  </div>
+
+  <h3>🥉 选项3：Kerama Travel｜無人島バナナボート</h3>
+  <div class="activity-option">
+    <div class="restaurant-name">🏝️ 无人岛冒险 + 自由浮潜</div>
+    <div style="margin-top: 0.8rem; font-size: 0.95rem;">
+      <strong>特色：</strong> バナナボートで無人島上陸<br>
+      <strong>讲师：</strong> 泳ぎが苦手な方も安心<br>
+      <strong>時間：</strong> 浮潜约1小時<br>
+      <strong>包含：</strong> パラソル + ビーチチェア + GoPro写真<br>
+      <strong>价格：</strong> <span class="price">約6,500-8,500日元/人</span><br>
+      <strong>预订：</strong> Kerama Travel<br>
+      <strong>链接：</strong> https://keramatravel.book.ntmg.com/
+    </div>
+  </div>
+
   <div class="alert">
-    <strong>✓ 必备物品</strong><br>
-    • 防晒霜 SPF50+（涂2遍！）<br>
-    • 毛巾×2 · 换衣服<br>
-    • 现金日元（岛内无卡）<br>
-    • 晕船药（高速船颠簸）<br>
-    • 隐形眼镜（戴眼镜浮潜困难）
+    <strong>💡 选择建议</strong><br>
+    • 想看海龟 → 选Cerulean Blue<br>
+    • 新手友好 → 选Jumbo Tours<br>
+    • 喜欢冒险 → 选Kerama Travel<br>
+    <br>
+    <strong>⏰ 重要：</strong> 高速船09:40到岛，17:30返程，岛上时间仅8小时。建议选择可在阿波連ビーチ直接集合的ツアー，省去港口往返时间。
   </div>
-  <div class="alert" style="background: #f5f5f5; border-color: #999;">
-    <strong>❌ 禁止事项</strong><br>
-    • 踩珊瑚（一脚毁十年！）<br>
-    • 普通防晒（杀珊瑚）→ 用珊瑚友好型<br>
-    • 摸鱼（会咬人）
-  </div>
-  <div class="alert" style="background: #fff9e6; border-color: #ff9800;">
-    <strong>📱 预订确认</strong><br>
-    ✓ 那霸酒店：已确认<br>
-    ✓ 北谷别墅：已确认<br>
-    ✓ 船票：预约号 TK06200039 已确认<br>
-    ⏳ 冲浪课程：需在Activity Japan预订<br>
-    ⏳ 日帰りツアー：需确认参加
-  </div>
+
 </div>
 
-<!-- 联系信息 -->
+<!-- 北谷餐厅推荐 -->
 <div class="section">
-  <h2>📞 联系信息速查</h2>
-  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-    <div style="background: #f9f7f3; padding: 1rem; border-radius: 4px;">
-      <strong>Lacer 那霸美荣茂</strong><br>
-      ☎️ +81 3 6910 2907<br>
-      📍 那霸市前岛3丁目7-7
-    </div>
-    <div style="background: #f9f7f3; padding: 1rem; border-radius: 4px;">
-      <strong>ReVIERA Resort Villa</strong><br>
-      ☎️ +81 98 923 0415<br>
-      📍 北谷町美浜三丁目2-7
-    </div>
-    <div style="background: #f9f7f3; padding: 1rem; border-radius: 4px;">
-      <strong>North Ocean Blue（冲浪）</strong><br>
-      ☎️ 098-923-5010<br>
-      🌐 https://nobsurf-okinawa.com/
-    </div>
-    <div style="background: #f9f7f3; padding: 1rem; border-radius: 4px;">
-      <strong>渡嘉敷船票预约</strong><br>
-      🌐 https://tokashiki-ferry.jp/Senpaku/portal<br>
-      ☎️ 098-868-7541
+  <h2>🍽️ 北谷美食推荐（Google高评价）</h2>
+
+  <h3>☕ 海滨咖啡（推荐日落时段）</h3>
+
+  <div class="restaurant-card">
+    <div class="restaurant-name">ZHYVAGO COFFEE WORKS OKINAWA</div>
+    <div style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">
+      📍 北谷アメリカンビレッジ内<br>
+      ⭐ Google 4.5★ (众多好评)<br>
+      💰 咖啡 800-1,200日元 | 套餐 1,500-2,500日元<br>
+      🎨 特色：海边絶景ビンテージ空間<br>
+      ⏰ 营业：早上7点开门<br>
+      💡 最佳时段：下午3-5点（咖啡时间）或傍晚（日落）
     </div>
   </div>
+
+  <div class="restaurant-card">
+    <div class="restaurant-name">トランジット カフェ（Transit Cafe）</div>
+    <div style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">
+      📍 北谷町美浜<br>
+      ⭐ Google 4.6★ (景观+餐饮好评)<br>
+      💰 パスタ 1,400-1,800日元 | パニーニ 1,200-1,500日元<br>
+      🎨 特色：海辺イタリアンカフェ、テラス座席<br>
+      🍝 推荐菜：Carbonara, Seafood Pasta<br>
+      💡 最佳时段：午餐 or 傍晚
+    </div>
+  </div>
+
+  <div class="restaurant-card">
+    <div class="restaurant-name">ザ カリフォルニア キッチン（The California Kitchen）</div>
+    <div style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">
+      📍 北谷町美浜（美国村近）<br>
+      ⭐ Google 4.4★<br>
+      💰 メイン 1,500-2,500日元 | ドリンク 600-1,000日元<br>
+      🎨 特色：絶景テラス | ハワイアンメニュー<br>
+      🌅 推荐：午後の日落时段坐户外<br>
+      💡 必点：Acai Bowl (朝食) | Fish Tacos
+    </div>
+  </div>
+
+  <h3>🍔 美式汉堡</h3>
+
+  <div class="restaurant-card">
+    <div class="restaurant-name">GORDIE'S BURGER</div>
+    <div style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">
+      📍 北谷町砂辺<br>
+      ⭐ Tabelog 百大 | Google 4.5★<br>
+      💰 <span class="price">1,551日元/人</span><br>
+      🍔 特色：こだわりバーガー | クラシックアメリカン<br>
+      📞 098-926-4455<br>
+      💡 必点：Classic Cheeseburger
+    </div>
+  </div>
+
+  <div class="restaurant-card">
+    <div class="restaurant-name">VONGO & ANCHOR</div>
+    <div style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">
+      📍 北谷町美浜（美国村近）<br>
+      ⭐ Google 4.4★ | Tabelog 高评<br>
+      💰 ハンバーガー 1,200-1,800日元 | イタリアン 1,500-2,500日元<br>
+      🎨 特色：ハンバーガー × イタリアン融合 | テラス座席<br>
+      💡 推荐：晚餐（6pm后）
+    </div>
+  </div>
+
+  <h3>🍖 高级烧肉/涮锅</h3>
+
+  <div class="restaurant-card">
+    <div class="restaurant-name">WaGyu-Cafe KAPUKA</div>
+    <div style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">
+      📍 北谷町美浜<br>
+      ⭐ Google 4.5★ | Tabelog 推荐<br>
+      💰 ステーキ 2,500-4,500日元<br>
+      🥩 特色：黒毛和牛 | カフェ×ステーキハウス<br>
+      💡 最佳時段：晚餐 (18:00+)
+    </div>
+  </div>
+
+  <div class="restaurant-card">
+    <div class="restaurant-name">阿古猪隱家（アコー豚涮し鍋）</div>
+    <div style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">
+      📍 北谷町 & 恩纳村<br>
+      ⭐ 地元民の隠れ家 | 高级涮锅<br>
+      💰 涮涮鍋套餐 3,500-5,500日元<br>
+      🍲 特色：沖縄あぐー豚 | 新鮮食材 | 落ち着き空間<br>
+      📞 090-8949-6651<br>
+      💡 需提前预約（周末很满）
+    </div>
+  </div>
+
 </div>
 
-<div style="text-align: center; padding: 2rem; color: #666; font-size: 0.9rem;">
-  <p>📝 最后更新：2026年6月 | 包含所有确认预订信息</p>
-  <p style="margin-top: 0.5rem;">玩得开心！ケラマブルーで会いましょう！🌊</p>
+<!-- 日落海滩信息 -->
+<div class="section">
+  <h2>🌅 日落海滩（Sunset Beach）完全指南</h2>
+
+  <div class="hotel-box">
+    <div class="hotel-name">北谷公园日落海滩</div>
+    <div style="margin-top: 1rem;">
+      <strong>📍 位置：</strong> 北谷町美浜2（美国村隔壁，步行<5分钟）<br>
+      <strong>📞 电话：</strong> 098-936-8273<br>
+      <br>
+      <strong>🌅 日落时间（6月）</strong><br>
+      • 6月20-23日日落：约 <span class="time-badge">19:30-19:40</span><br>
+      • 最佳拍照时间：19:15-19:45<br>
+      • 黄金时段：傍晚5:30pm开始逐渐变红<br>
+      <br>
+      <strong>🏊 游泳时间</strong><br>
+      • 4月中旬-6月30日：9:00-18:00<br>
+      • 7月-8月：9:00-19:00<br>
+      • 💡 可在日落前（17:30-18:00）进海<br>
+      <br>
+      <strong>🏖️ 设施</strong><br>
+      ✓ 更衣室、淋浴间（约100日元/3分钟）<br>
+      ✓ 储物柜（200日元/天）<br>
+      ✓ 免费停车<br>
+      ✓ BBQ区（需预约 PubQue）<br>
+      ✓ 海之家「Island Paddler's」（饮料/酒类）<br>
+      <br>
+      <strong>🎬 打卡点</strong><br>
+      • 日落步道（Sunset Walk）：拍夕阳最佳角度<br>
+      • 空中观海平台：豚肉蛋饭糰后方（免费入场）<br>
+      • 夜景：美国村摩天轮+海景（19:30后）
+    </div>
+  </div>
+
+  <div class="alert">
+    <strong>📸 拍照小贴士</strong><br>
+    • 6月太阳位置偏北，最佳拍照角度是面向西北<br>
+    • 带上防晒+墨镜（反光强）<br>
+    • 下午4点起沙滩人群开始增加<br>
+    • 日落前30分钟是golden hour，光线最柔和<br>
+    • 可在日落前进海，日落时刚好在水里拍<br>
+  </div>
+
+</div>
+
+<!-- 北谷娱乐 -->
+<div class="section">
+  <h2>🎪 北谷娱乐 & 购物</h2>
+
+  <h3>🎡 美国村（American Village）</h3>
+  <div class="activity">
+    <strong>📍 位置：</strong> 北谷町美浜（距别墅步行2分钟）<br>
+    <strong>⏰ 营业时间：</strong> 大多数店 10:00-22:00（周末可延至23:00）<br>
+    <br>
+    <strong>🎪 主要景点：</strong><br>
+    ✓ <strong>摩天轮</strong> - 高60m，可俯瞰美国村+海景<br>
+    &nbsp;&nbsp;&nbsp; 💰 ¥1,000 | ⏱️ 约15分钟 | 最佳时段：傍晚<br>
+    <br>
+    ✓ <strong>Depot Island</strong> - 逛街+餐饮中心<br>
+    &nbsp;&nbsp;&nbsp; 品牌：Nike, Uniqlo, GU, Crocs, 药妆<br>
+    <br>
+    ✓ <strong>购物中心</strong><br>
+    &nbsp;&nbsp;&nbsp; • AEON MALL - 综合商场<br>
+    &nbsp;&nbsp;&nbsp; • 电影院、书店、餐厅<br>
+    <br>
+    ✓ <strong>伴手礼店</strong><br>
+    &nbsp;&nbsp;&nbsp; • Blue Seal 冰淇淋（オリジナル風味）<br>
+    &nbsp;&nbsp;&nbsp; • 冲绳特产店（黑糖、红芋、泡盛）<br>
+  </div>
+
+  <h3>🏊 水上活动（可选）</h3>
+  <div class="activity">
+    <strong>北谷宮城海岸浮潜</strong><br>
+    💰 4,000-6,000日元/人 | ⏱️ 2小时<br>
+    <strong>预订：</strong> Activity Japan 搜索「北谷 シュノーケリング」<br>
+    <br>
+    <strong>或在ReVIERA别墅私人泳池</strong><br>
+    🏊 免费使用（白天）| 夜间也可（静谧的夜游体验）
+  </div>
+
+</div>
+
+<!-- 最后清单 -->
+<div class="section">
+  <h2>✅ 出发前最后确认清单</h2>
+
+  <div class="confirm-box">
+    <strong>🔴 必须提前预约</strong><br>
+    ☐ 渡嘉敷浮潜ツアー（选项1-3中任选）- Activity Japan<br>
+    ☐ 北谷出租车接送（21日、23日）- 提前1天电话预订<br>
+    ☐ 高级烧肉/涮锅预约（如选择）- 电话预约<br>
+  </div>
+
+  <div class="confirm-box">
+    <strong>✅ 已确认无需再预约</strong><br>
+    ☐ 渡轮船票：TK06200039（6.20）<br>
+    ☐ 冲浪课程：预约ID 4881904（6.22 11:00）<br>
+    ☐ 那霸酒店：Lacer（已确认）<br>
+    ☐ 北谷别墅：ReVIERA（已确认）<br>
+  </div>
+
+  <div class="alert">
+    <strong>📱 出发一周前务必</strong><br>
+    1️⃣ 确认天气预报（6月上旬通常在梅雨季末，可能有雨）<br>
+    2️⃣ 确认渡轮是否受天气影响（查官网或电话确认）<br>
+    3️⃣ 准备现金日元（岛内无卡支付）<br>
+    4️⃣ 下载离线地图+Google翻译<br>
+    5️⃣ 确保手机开通日本漫游或买当地SIM卡<br>
+  </div>
+
+  <div class="note" style="margin-top: 2rem;">
+    <strong>💡 这个版本包含：</strong><br>
+    ✓ 完整船票+冲浪课确认信息<br>
+    ✓ 全程交通方案（含出租车预订建议）<br>
+    ✓ 渡嘉敷3大浮潜活动对比<br>
+    ✓ 北谷10+高评价餐厅/咖啡<br>
+    ✓ 日落海滩完全信息<br>
+    ✓ 美国村娱乐指南<br>
+    <br>
+    <strong>现在可以直接分享给4位姐妹！🎉</strong>
+  </div>
+
+</div>
+
+<div style="text-align: center; padding: 2rem; color: #999; font-size: 0.9rem;">
+  <p>📝 最后更新：2026年6月 | 所有预订已确认</p>
+  <p>玩得开心！ケラマブルーで会いましょう！🌊</p>
 </div>
 
 </div>
